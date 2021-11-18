@@ -4,8 +4,12 @@
 /* eslint-disable unicorn/prefer-module */
 
 const path = require('path')
+// const CopyPlugin = require('copy-webpack-plugin')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+// const isProd = process.env.NODE_ENV === 'production'
 
 /** @type import("webpack").Configuration */
 module.exports = {
@@ -38,12 +42,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              // Options
-            },
-          },
+          'postcss-loader',
         ],
       },
     ],
@@ -53,6 +52,14 @@ module.exports = {
       title: 'Siggraph UPenn',
       template: 'index.html',
     }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: 'public',
+    //       to: '',
+    //     },
+    //   ],
+    // }),
   ],
   optimization: {
     minimizer: [new UglifyJsPlugin()],

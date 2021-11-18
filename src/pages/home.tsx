@@ -5,7 +5,7 @@ const Home = () => (
   <div>
     Hello Siggraph!
     <Link to="/about">
-      AHGHG
+      About
     </Link>
   </div>
 )
