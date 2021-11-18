@@ -32,6 +32,8 @@ module.exports = {
         // "import/prefer-default-export": "off",
         // "import/no-default-export": "error",
         "react/jsx-filename-extension": "off",
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
         "@typescript-eslint/semi": 0,
         // weird unicorn stuff
         "unicorn/prevent-abbreviations": "off",
