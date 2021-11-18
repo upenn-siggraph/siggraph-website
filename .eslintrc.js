@@ -28,7 +28,7 @@ module.exports = {
     ],
     "rules": {
         "semi": ["error", "never"],
-        "eslint/linebreak-style": 0,
+        "linebreak-style": 0,
         // "import/prefer-default-export": "off",
         // "import/no-default-export": "error",
         "react/jsx-filename-extension": "off",
