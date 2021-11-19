@@ -38,5 +38,6 @@ module.exports = {
         // weird unicorn stuff
         "unicorn/prevent-abbreviations": "off",
         "unicorn/no-array-for-each": "off",
+        "unicorn/no-null": "off"
     }
 };
