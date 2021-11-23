@@ -1,47 +1,22 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
-  MutableRefObject, useEffect, useRef, useState,
+  useRef,
 } from 'react'
 
-interface TrianglesConfig {
-  bgColor: string;
-  lineColor: string;
-  triangleSize: number;
-  lineWidth: number;
-}
-
-const defaultTrianglesConfig: TrianglesConfig = {
-  bgColor: '#fff',
-  lineColor: '#000',
-  triangleSize: 130,
-  lineWidth: 4,
-}
-
 // triangle drawing function
-const drawTriangles = (ctx: CanvasRenderingContext2D, {
-  bgColor, lineColor, triangleSize, lineWidth,
-}: TrianglesConfig) => {
+const drawLoop = (ctx: CanvasRenderingContext2D) => {
   const { width, height } = ctx.canvas
-  ctx.strokeStyle = lineColor
+  ctx.fillStyle = '#d0a584'
+  ctx.fillRect(0, 0, width, height)
 }
 
 // actual hook
-const useBackgroundLoop = (canvasRef: MutableRefObject<HTMLCanvasElement>) => {
+const useBackgroundLoop = () => {
   const lastFrame = useRef<number>(Date.now())
-  const ctx = useRef<CanvasRenderingContext2D>()
 
-  // assign current ctx
-  useEffect(() => {
-    if (canvasRef.current !== null) {
-      ctx.current = (canvasRef.current.getContext('2d')!)
-    }
-  }, [canvasRef])
-
-  const loop = () => {
+  const loop = (ctx: CanvasRenderingContext2D) => {
     // const dt = Date.now() - lastFrame.current
-
-    drawTriangles(ctx.current!, defaultTrianglesConfig)
-
+    drawLoop(ctx)
     lastFrame.current = Date.now()
   }
 
