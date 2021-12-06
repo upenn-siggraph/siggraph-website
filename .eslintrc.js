@@ -27,7 +27,7 @@ module.exports = {
         "promise"
     ],
     "rules": {
-        "semi": ["error", "never"],
+        "semi": ["warn", "never"],
         "linebreak-style": 0,
         // "import/prefer-default-export": "off",
         // "import/no-default-export": "error",
@@ -35,6 +35,14 @@ module.exports = {
         "react/prop-types": "off",
         "react/require-default-props": "off",
         "@typescript-eslint/semi": 0,
+        "@typescript-eslint/member-delimiter-style": ["warn", {
+            "multiline": {
+                "delimiter": "none"
+            },
+            "singleline": {
+                "delimiter": "comma"
+            }
+        }],
         // weird unicorn stuff
         "unicorn/prevent-abbreviations": "off",
         "unicorn/no-array-for-each": "off",

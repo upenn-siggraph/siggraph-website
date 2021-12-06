@@ -1,9 +1,9 @@
 export type PageRoute = {
-  name: string;
-  path: string;
+  name: string
+  path: string
 }
 
-const pages : Array<PageRoute> = [
+const pages : PageRoute[] = [
   {
     name: 'Home',
     path: '/',
