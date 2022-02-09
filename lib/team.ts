@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 
-const people = [
+const team = [
   {
     name: 'Amelia Peng',
     role: 'Co-President',
@@ -63,4 +63,4 @@ const people = [
   },
 ]
 
-export default people
+export default team
