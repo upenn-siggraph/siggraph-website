@@ -14,6 +14,7 @@ const Home: NextPage = () => {
 
       <main className="container mx-auto px-4">
         <TeamList />
+        <p>Hello!</p>
       </main>
     </div>
   )

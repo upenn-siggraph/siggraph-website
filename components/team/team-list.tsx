@@ -13,8 +13,8 @@ const TeamList = () => (
           className="aspect-square w-auto h-auto rounded-xl shadow-lg"
         />
         <div className="m-4">
-          <h3 className="text-xl font-bold">{name}</h3>
-          <p className="text-gray-400">{role}</p>
+          <h3 className="text-xl font-bold dark:text-gray-900">{name}</h3>
+          <p className="text-gray-600 dark:text-gray-500">{role}</p>
         </div>
       </li>
     ))}
