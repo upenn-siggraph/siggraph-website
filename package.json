@@ -1,6 +1,8 @@
 {
   "name": "siggraph-website",
-  "private": true,
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
