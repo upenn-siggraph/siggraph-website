@@ -1,0 +1,26 @@
+# This just uses yarn to publish.
+name: Publish to gh-pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and export
+      uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: export
+    - name: Publish to Github Pages
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./out
+      
