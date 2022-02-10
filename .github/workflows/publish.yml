@@ -18,9 +18,9 @@ jobs:
       with:
         node-version: '16'
     - name: Create env file
-        run: |
-          touch .env \
-          echo BASE_PATH=/siggraph-website >> .env \
+        run: >
+          touch .env
+          echo BASE_PATH=/siggraph-website >> .env
           cat .env
     - run: npm install
     - name: Build and export
