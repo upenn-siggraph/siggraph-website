@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const basePath = process.env.BASE_PATH ?? ''
-console.log(`Using base path ${basePath}`)
+if (process.env.BASE_PATH) console.log(`Using custom base path ${basePath}`)
 
 const withPlugins = require('next-compose-plugins')
 const withLqipImages = require('next-lqip-images')
