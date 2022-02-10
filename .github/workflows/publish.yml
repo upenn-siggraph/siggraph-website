@@ -17,12 +17,11 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '16'
-    - name: Make .env file
-      uses: SpicyPizza/create-envfile@v1
-      with:
-        file_name: .env
-        args:
-          BASE_PATH: /siggraph-website
+    - name: Create env file
+        run: |
+          touch .env
+          echo BASE_PATH=/siggraph-website >> .env
+          cat .env
     - run: npm install
     - name: Build and export
       run: npm run export
