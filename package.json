@@ -7,11 +7,13 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "publish": "next build && next export && gh-pages out"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
+    "dotenv": "^16.0.0",
     "next": "12.0.8",
     "next-compose-plugins": "^2.2.1",
     "next-lqip-images": "^0.1.0",
@@ -37,6 +39,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.19",
     "typescript": "4.5.5"
