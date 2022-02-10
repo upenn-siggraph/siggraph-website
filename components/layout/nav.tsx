@@ -17,6 +17,9 @@ const pages = [
   },
 ]
 
+const navShadow =
+  '[box-shadow:0_-7px_12px_rgba(0,0,0,.5)] sm:[box-shadow:0_10px_12px_-17px_rgba(0,0,0,.5)]'
+
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
@@ -26,7 +29,9 @@ const Nav = () => {
 
   return (
     <nav className="sticky top-0 z-10">
-      <div className="mx-[-1rem] bg-gray-100 flex items-center">
+      <div
+        className={`mx-[-1rem] bg-white dark:bg-gray-100 flex items-center ${navShadow}`}
+      >
         <button
           type="button"
           className={`p-6 z-[11] ${open ? 'text-white' : ''}`}
@@ -57,7 +62,9 @@ const Nav = () => {
               return (
                 <li
                   key={href}
-                  className={`${onPage ? 'border-l-white border-l-4' : ''}`}
+                  className={`border-l-4 border-l-transparent ${
+                    onPage ? 'border-l-white' : ''
+                  }`}
                 >
                   <Link href={href}>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

@@ -4,6 +4,7 @@ module.exports = {
   content: ['{pages,lib,components,hooks}/**/*.{html,ts,tsx}'],
   theme: {
     colors: {
+      transparent: colors.transparent,
       white: colors.white,
       black: colors.black,
       gray: {
