@@ -41,7 +41,7 @@ const LazyImage = ({
             setLoaded(true)
           }}
           className={`transition-[opacity,filter] w-full h-auto ${
-            loaded ? '' : 'opacity-0 blur-[20px]'
+            loaded ? '' : 'opacity-0 blur-[12px]'
           }`}
         />
       )}
