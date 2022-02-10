@@ -4,8 +4,6 @@ name: Publish to gh-pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
