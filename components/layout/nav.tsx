@@ -47,15 +47,14 @@ const Nav = () => {
           className="fixed inset-0 bg-logo-gradient-3 h-screen w-full"
           enter="transition-height duration-300"
           enterFrom="h-[0vh]"
-          enterTo="h-screen"
           leave="transition-height duration-300 top-auto"
-          leaveFrom="h-screen"
           leaveTo="h-[0vh]"
         />
         <Transition.Child
           enter="transition-opacity duration-500"
           enterFrom="opacity-0"
-          enterTo="opacity-1"
+          leave="transition-opacity duration-100"
+          leaveTo="opacity-0"
         >
           <ul className="fixed text-white">
             {pages.map(({ name, href }) => {
