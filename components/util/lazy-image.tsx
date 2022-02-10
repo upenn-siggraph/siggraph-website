@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, useEffect, useRef, useState } from 'react'
+import { ComponentPropsWithoutRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 interface LazyImageProps extends ComponentPropsWithoutRef<'div'> {
@@ -19,16 +19,6 @@ const LazyImage = ({
   const [ref, inView] = useInView({ triggerOnce: true })
   const [loaded, setLoaded] = useState(false)
 
-  const imageRef = useRef<HTMLImageElement>(null)
-
-  useEffect(() => {
-    if (imageRef.current) {
-      if (imageRef.current.complete) {
-        setLoaded(true)
-      }
-    }
-  }, [inView, imageRef])
-
   return (
     <div
       {...props}
@@ -42,7 +32,6 @@ const LazyImage = ({
     >
       {inView && (
         <img
-          ref={imageRef}
           src={src}
           alt={alt}
           width={width}
