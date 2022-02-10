@@ -1,0 +1,44 @@
+{
+  "name": "siggraph-website",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.3",
+    "@heroicons/react": "^1.0.5",
+    "next": "12.0.8",
+    "next-compose-plugins": "^2.2.1",
+    "next-lqip-images": "^0.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.33.1",
+    "sass": "^1.49.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@types/node": "17.0.11",
+    "@types/react": "17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "16.1.0",
+    "eslint-config-next": "12.0.8",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.19",
+    "typescript": "4.5.5"
+  }
+}
