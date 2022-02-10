@@ -18,7 +18,8 @@ jobs:
       with:
         node-version: '16'
     - run: npm install
-    - run: npm export
+    - name: Build and export
+      run: npm export
     - name: Publish to Github Pages
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
