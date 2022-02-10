@@ -14,10 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build and export
-      uses: borales/actions-yarn@v2.3.0
+    - uses: actions/setup-node@v2
       with:
-        cmd: export
+        node-version: '16'
+    - run: npm install
+    - run: npm export
     - name: Publish to Github Pages
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
