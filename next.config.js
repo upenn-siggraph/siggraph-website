@@ -1,5 +1,8 @@
 require('dotenv').config()
 
+const basePath = process.env.BASE_PATH ?? ''
+console.log(`Using base path ${basePath}`)
+
 const withPlugins = require('next-compose-plugins')
 const withLqipImages = require('next-lqip-images')
 
@@ -9,7 +12,7 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
-  basePath: process.env.BASE_PATH || ''
+  basePath: basePath
 }
 
 module.exports = withPlugins([withLqipImages], nextConfig)
