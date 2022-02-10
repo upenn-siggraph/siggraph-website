@@ -20,7 +20,7 @@ jobs:
     - name: Make .env file
       uses: SpicyPizza/create-envfile@v1
       with:
-        BASE_PATH: /siggraph-website
+        envkey_BASE_PATH: /siggraph-website
         file_name: .env
     - run: npm install
     - name: Build and export
