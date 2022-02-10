@@ -16,7 +16,7 @@
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "dotenv": "^16.0.0",
-    "next": "12.0.8",
+    "next": "12.0.9",
     "next-compose-plugins": "^2.2.1",
     "next-lqip-images": "^0.1.0",
     "react": "17.0.2",
