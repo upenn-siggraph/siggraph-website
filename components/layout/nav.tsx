@@ -36,6 +36,7 @@ const Nav = () => {
           type="button"
           className={`p-6 z-[11] ${open ? 'text-white' : ''}`}
           onClick={() => setOpen((o) => !o)}
+          name={`${open ? 'Close' : 'Open'} Navigation Menu`}
         >
           <MenuAlt2Icon className="w-5 h-5" />
         </button>
