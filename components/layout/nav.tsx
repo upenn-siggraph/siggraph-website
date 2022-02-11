@@ -64,7 +64,7 @@ const Nav = () => {
           </video>
         </Transition.Child>
         <Transition.Child
-          className="fixed"
+          className="fixed container mx-auto top-20"
           enter="transition-opacity duration-500"
           enterFrom="opacity-0"
           leave="transition-opacity duration-100"
