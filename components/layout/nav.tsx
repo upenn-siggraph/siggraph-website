@@ -100,7 +100,7 @@ const Nav = () => {
         </Transition.Child>
       </Transition>
       <video className="hidden" muted>
-        <source src="/video/background.mp4" />
+        <source src={getPath('/video/background.mp4')} />
       </video>
     </nav>
   )
