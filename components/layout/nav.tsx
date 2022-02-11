@@ -34,30 +34,45 @@ const Nav = () => {
       >
         <button
           type="button"
-          className={`p-6 z-[11] ${open ? 'text-white' : ''}`}
+          className={`p-6 z-[11] transition-[color] ${
+            open ? 'text-white' : ''
+          }`}
           onClick={() => setOpen((o) => !o)}
           name={`${open ? 'Close' : 'Open'} Navigation Menu`}
         >
           <MenuAlt2Icon className="w-5 h-5" />
         </button>
-        <h2 className="font-extrabold text-2xl">Siggraph UPenn</h2>
+        <h2 className="font-extrabold text-2xl">UPenn Siggraph</h2>
       </div>
       <Transition show={open}>
         <Transition.Child
-          className="fixed inset-0 bg-logo-gradient-3 h-screen w-full"
+          className="fixed inset-0 h-screen w-full overflow-hidden
+            bg-gray-300 [clip-path:polygon(0_100%,100%_100%,100%_0,0_0)]"
           enter="transition-height duration-300"
-          enterFrom="h-[0vh]"
-          enterTo="h-screen"
-          leave="transition-height duration-300 top-auto"
-          leaveFrom="h-screen"
-          leaveTo="h-[0vh]"
-        />
+          enterFrom="[clip-path:polygon(0_0,100%_0,100%_0,0_0)]"
+          leave="transition-[clip-path] duration-300"
+          leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
+        >
+          <video
+            autoPlay
+            muted
+            className="h-full w-full min-h-[56.25vw] min-w-[177.78vh] blur"
+            loop
+          >
+            <source src="/video/background.mp4" />
+          </video>
+        </Transition.Child>
         <Transition.Child
+          className="fixed"
           enter="transition-opacity duration-500"
           enterFrom="opacity-0"
-          enterTo="opacity-1"
+          leave="transition-opacity duration-100"
+          leaveTo="opacity-0"
         >
-          <ul className="fixed text-white">
+          <h2 className="font-black text-white tracking-tight text-6xl my-4 drop-shadow">
+            UPenn Siggraph
+          </h2>
+          <ul className="w-full h-full text-white tracking-wide drop-shadow">
             {pages.map(({ name, href }) => {
               const onPage = pathname === href
               return (
@@ -83,6 +98,9 @@ const Nav = () => {
           </ul>
         </Transition.Child>
       </Transition>
+      <video className="hidden" muted>
+        <source src="/video/background.mp4" />
+      </video>
     </nav>
   )
 }
