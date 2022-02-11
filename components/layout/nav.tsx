@@ -45,35 +45,28 @@ const Nav = () => {
         </button>
         <h2 className="font-extrabold text-2xl">UPenn Siggraph</h2>
       </div>
-      <Transition show={open}>
-        <Transition.Child
-          className="fixed inset-0 h-screen w-full overflow-hidden
+      <Transition
+        show={open}
+        className="fixed inset-0 h-screen w-full overflow-hidden
             bg-gray-300 [clip-path:polygon(0_100%,100%_100%,100%_0,0_0)]"
-          enter="transition-height duration-300"
-          enterFrom="[clip-path:polygon(0_0,100%_0,100%_0,0_0)]"
-          leave="transition-[clip-path] duration-300"
-          leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
+        enter="transition-height duration-300"
+        enterFrom="[clip-path:polygon(0_0,100%_0,100%_0,0_0)]"
+        leave="transition-[clip-path] duration-300"
+        leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
+      >
+        <video
+          autoPlay
+          muted
+          className="h-full w-full min-h-[56.25vw] min-w-[177.78vh] blur"
+          loop
         >
-          <video
-            autoPlay
-            muted
-            className="h-full w-full min-h-[56.25vw] min-w-[177.78vh] blur"
-            loop
-          >
-            <source src={getPath('/video/background.mp4')} />
-          </video>
-        </Transition.Child>
-        <Transition.Child
-          className="fixed container mx-auto top-20"
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          leave="transition-opacity duration-100"
-          leaveTo="opacity-0"
-        >
+          <source src={getPath('/video/background.mp4')} />
+        </video>
+        <div className="absolute inset-0 container mx-auto px-4 top-14">
           <h2 className="font-black text-white tracking-tight text-6xl my-4 drop-shadow">
             UPenn Siggraph
           </h2>
-          <ul className="w-full h-full text-white tracking-wide drop-shadow">
+          <ul className="text-white tracking-wide drop-shadow">
             {pages.map(({ name, href }) => {
               const onPage = pathname === href
               return (
@@ -97,7 +90,7 @@ const Nav = () => {
               )
             })}
           </ul>
-        </Transition.Child>
+        </div>
       </Transition>
       <video className="hidden" muted>
         <source src={getPath('/video/background.mp4')} />
