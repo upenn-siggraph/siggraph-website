@@ -5,6 +5,7 @@ import { MenuAlt2Icon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
 import useLockBody from '../../hooks/useLockBody'
+import useBasePath from '../../hooks/useBasePath'
 
 const pages = [
   {
@@ -22,7 +23,7 @@ const navShadow =
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
-
+  const { getPath } = useBasePath()
   const { pathname } = useRouter()
 
   useLockBody(open)
@@ -59,7 +60,7 @@ const Nav = () => {
             className="h-full w-full min-h-[56.25vw] min-w-[177.78vh] blur"
             loop
           >
-            <source src="/video/background.mp4" />
+            <source src={getPath('/video/background.mp4')} />
           </video>
         </Transition.Child>
         <Transition.Child
