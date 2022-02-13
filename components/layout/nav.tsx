@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
 import useLockBody from '../../hooks/useLockBody'
 import useBasePath from '../../hooks/useBasePath'
+import VideoBG from './video-bg'
 
 const pages = [
   {
@@ -20,6 +21,8 @@ const pages = [
 
 const navShadow =
   '[box-shadow:0_-7px_12px_rgba(0,0,0,.5)] sm:[box-shadow:0_10px_12px_-17px_rgba(0,0,0,.5)]'
+
+const navLinkStyle = 'block p-4 text-xl font-semibold'
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
@@ -54,14 +57,7 @@ const Nav = () => {
         leave="transition-[clip-path] duration-300"
         leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
       >
-        <video
-          autoPlay
-          muted
-          className="h-full w-full min-h-[56.25vw] min-w-[177.78vh] blur"
-          loop
-        >
-          <source src={getPath('/video/background.mp4')} />
-        </video>
+        <VideoBG />
         <div className="absolute inset-0 container mx-auto px-4 top-14">
           <h2 className="font-black text-white tracking-tight text-6xl my-4 drop-shadow">
             UPenn Siggraph
@@ -76,16 +72,21 @@ const Nav = () => {
                     onPage ? 'border-l-white' : ''
                   }`}
                 >
-                  <Link href={href}>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a
-                      className={`block p-4 text-xl font-semibold ${
-                        onPage ? '' : ''
-                      }`}
+                  {' '}
+                  {onPage ? (
+                    <button
+                      type="button"
+                      onClick={() => setOpen(false)}
+                      className={navLinkStyle}
                     >
                       {name}
-                    </a>
-                  </Link>
+                    </button>
+                  ) : (
+                    <Link href={href}>
+                      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                      <a className={navLinkStyle}>{name}</a>
+                    </Link>
+                  )}
                 </li>
               )
             })}
