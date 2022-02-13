@@ -4,7 +4,7 @@
     "airbnb-typescript",
     "airbnb/hooks",
     "next/core-web-vitals",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
   "overrides": [
     {

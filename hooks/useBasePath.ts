@@ -5,9 +5,7 @@ const useBasePath = () => {
   const { basePath } = useRouter()
 
   const getPath = useCallback(
-    (path: string) => {
-      return basePath.charAt(0) === '/' ? basePath + path : path
-    },
+    (path: string) => (basePath.charAt(0) === '/' ? basePath + path : path),
     [basePath]
   )
 
