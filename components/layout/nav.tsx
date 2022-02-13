@@ -22,7 +22,7 @@ const pages = [
 const navShadow =
   '[box-shadow:0_-7px_12px_rgba(0,0,0,.5)] sm:[box-shadow:0_10px_12px_-17px_rgba(0,0,0,.5)]'
 
-const navLinkStyle = 'block p-4 text-xl font-semibold'
+const navLinkStyle = 'block p-4 text-xl font-semibold inline-block w-auto'
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
