@@ -72,21 +72,22 @@ const Nav = () => {
                     onPage ? 'border-l-white' : ''
                   }`}
                 >
-                  {' '}
-                  {onPage ? (
-                    <button
-                      type="button"
-                      onClick={() => setOpen(false)}
+                  <Link href={href}>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                    <a
                       className={navLinkStyle}
+                      role="link"
+                      tabIndex={0}
+                      onKeyPress={(evt) => {
+                        if (evt.key === 'Enter') setOpen(false)
+                      }}
+                      onClick={() => {
+                        setOpen(false)
+                      }}
                     >
                       {name}
-                    </button>
-                  ) : (
-                    <Link href={href}>
-                      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                      <a className={navLinkStyle}>{name}</a>
-                    </Link>
-                  )}
+                    </a>
+                  </Link>
                 </li>
               )
             })}
