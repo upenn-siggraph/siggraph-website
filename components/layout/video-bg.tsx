@@ -28,7 +28,7 @@ const VideoBG = () => {
       ref={videoRef}
       loop
     >
-      <source src={getPath('/video/background.mp4')} />
+      <source src={getPath('video/background.mp4')} />
     </video>
   )
 }
