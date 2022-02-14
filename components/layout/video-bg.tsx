@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import useBasePath from '../../hooks/useBasePath'
+import useBasePath from '../../hooks/use-base-path'
 
 const VideoBG = () => {
   const { getPath } = useBasePath()

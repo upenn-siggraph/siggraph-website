@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { MenuAlt2Icon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
-import useLockBody from '../../hooks/useLockBody'
-import useBasePath from '../../hooks/useBasePath'
+import useLockBody from '../../hooks/use-lock-body'
+import useBasePath from '../../hooks/use-base-path'
 import VideoBG from './video-bg'
 
 const pages = [
