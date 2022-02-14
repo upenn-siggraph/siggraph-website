@@ -42,8 +42,10 @@ const Nav = () => {
             open ? 'text-white' : ''
           }`}
           onClick={() => setOpen((o) => !o)}
-          name={`${open ? 'Close' : 'Open'} Navigation Menu`}
         >
+          <span className="sr-only">{`${
+            open ? 'Close' : 'Open'
+          } Navigation Menu`}</span>
           <MenuAlt2Icon className="w-5 h-5" />
         </button>
         <h2 className="font-extrabold text-2xl">UPenn Siggraph</h2>
