@@ -17,6 +17,10 @@ const pages = [
     name: 'Team',
     href: '/team',
   },
+  {
+    name: 'Events',
+    href: '/events',
+  },
 ]
 
 const navShadow =

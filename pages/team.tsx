@@ -4,7 +4,7 @@ import TeamList from '../components/team/team-list'
 const TeamPage = () => (
   <>
     <Head>
-      <title>Siggraph UPenn - Meet the Team</title>
+      <title>UPenn Siggraph - Meet the Team</title>
       <meta
         name="description"
         content="Meet UPenn Siggraph's dedicated team of students that are deeply
