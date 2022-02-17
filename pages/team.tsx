@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { SectionHeader } from '../components/common'
 import TeamList from '../components/team/team-list'
 
 const TeamPage = () => (
@@ -11,9 +12,7 @@ const TeamPage = () => (
         passionate about interactive computer graphics."
       />
     </Head>
-    <h1 className="text-6xl font-black tracking-tight text-gray-100 dark:text-gray-900 mt-8 mb-12 drop-shadow self-center">
-      Meet the Team
-    </h1>
+    <SectionHeader>Meet the Team</SectionHeader>
     <TeamList />
   </>
 )

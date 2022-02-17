@@ -1,5 +1,5 @@
-import { Container } from './layout/common'
-import Nav from './layout/nav'
+import { Container } from './common'
+import Nav from './nav'
 
 export interface LayoutProps {
   children: React.ReactNode

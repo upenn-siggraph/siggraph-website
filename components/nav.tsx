@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { MenuAlt2Icon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
-import useLockBody from '../../hooks/use-lock-body'
-import useBasePath from '../../hooks/use-base-path'
-import VideoBG from './video-bg'
+import useLockBody from '../hooks/use-lock-body'
+import useBasePath from '../hooks/use-base-path'
 
 const pages = [
   {
@@ -27,6 +26,38 @@ const navShadow =
   '[box-shadow:0_-7px_12px_rgba(0,0,0,.5)] sm:[box-shadow:0_10px_12px_-17px_rgba(0,0,0,.5)]'
 
 const navLinkStyle = 'block p-4 text-xl font-semibold inline-block w-auto'
+
+const VideoBG = () => {
+  const { getPath } = useBasePath()
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const updateTime = () => {
+    if (!videoRef.current) return
+    videoRef.current.style.filter = `blur(7px) hue-rotate(${
+      (Date.now() / 100) % 360
+    }deg)`
+  }
+
+  useEffect(() => {
+    updateTime()
+    const i = setInterval(updateTime, 500)
+    return () => {
+      clearInterval(i)
+    }
+  }, [])
+
+  return (
+    <video
+      autoPlay
+      muted
+      className="h-full w-full min-h-[56.25vw] min-w-[177.78vh]"
+      ref={videoRef}
+      loop
+    >
+      <source src={getPath('video/background.mp4')} />
+    </video>
+  )
+}
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
