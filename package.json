@@ -18,7 +18,7 @@
     "@heroicons/react": "^1.0.5",
     "dotenv": "^16.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "next": "12.0.9",
+    "next": "12.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-lqip-images": "^0.1.0",
     "react": "17.0.2",
