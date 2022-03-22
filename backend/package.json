@@ -1,0 +1,27 @@
+{
+  "name": "siggraph-website-backend",
+  "author": "Thomas Shaw <printer.83mph@gmail.com>",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.1.5",
+    "@strapi/plugin-users-permissions": "4.1.5",
+    "@strapi/plugin-i18n": "4.1.5",
+    "sqlite3": "5.0.2"
+  },
+  "strapi": {
+    "uuid": "4de91d64-5c16-4fc6-8516-d9f270d978ee"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  }
+}
