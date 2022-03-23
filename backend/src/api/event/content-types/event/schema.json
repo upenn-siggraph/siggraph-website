@@ -23,7 +23,7 @@
     "title": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "start": {
       "type": "datetime",
@@ -46,6 +46,12 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "unique": true
     }
   }
 }
