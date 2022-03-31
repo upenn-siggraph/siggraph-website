@@ -16,6 +16,9 @@ export interface StrapiItem<T> {
   attributes: T
 }
 
+export interface StrapiSingle<T>
+  extends StrapiItem<{ [key: string]: StrapiResponse<StrapiItem<T>> }> {}
+
 export interface StrapiCollection<T> extends Array<StrapiItem<T>> {}
 
 export interface StrapiImage {

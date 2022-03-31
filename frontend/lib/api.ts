@@ -2,8 +2,8 @@ import {
   EventData,
   Identifier,
   StrapiCollection,
-  StrapiRelation,
   StrapiResponse,
+  StrapiSingle,
 } from './types'
 
 /* eslint-disable import/prefer-default-export */
@@ -15,7 +15,7 @@ export const fetcher = <T = any>(url: string): Promise<StrapiResponse<T>> =>
   }).then((r) => r.json())
 
 export const getEvents = async () =>
-  (await fetcher<StrapiCollection<EventData>>('/events?populate=*')).data
+  (await fetcher<StrapiCollection<EventData>>('/events')).data
 
 export const getEventPaths = async (events?: StrapiCollection<EventData>) =>
   (events || (await getEvents())).map(({ attributes: { slug } }) => slug)
@@ -32,4 +32,5 @@ export const getEventFromSlug = async (
 }
 
 export const getDisplayEvent = async () =>
-  (await fetcher<StrapiRelation>('/display-event?populate=*')).data
+  (await fetcher<StrapiSingle<EventData>>('/display-event?populate=*')).data
+    .attributes.event.data

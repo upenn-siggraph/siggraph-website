@@ -1,9 +1,9 @@
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { SectionHeader } from '../../components/common'
 import { getDisplayEvent, getEvents } from '../../lib/api'
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps = async () => {
   const [eventsData, displayEventData] = await Promise.all([
     getEvents(),
     getDisplayEvent(),
@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 type ServerSideProps = InferGetStaticPropsType<typeof getStaticProps>
 
-const EventsPage: NextPage = (props: ServerSideProps) => {
+const EventsPage = (props: ServerSideProps) => {
   const { eventsData, displayEventData } = props
   return (
     <>
