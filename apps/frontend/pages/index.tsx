@@ -5,6 +5,7 @@ import { Container } from '../components/common'
 
 const Home: NextPage = () => (
   <Container>
+    {/* TODO: use NextSeo */}
     <Head>
       <title>UPenn Siggraph</title>
       <meta

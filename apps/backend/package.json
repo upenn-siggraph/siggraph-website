@@ -1,9 +1,7 @@
 {
-  "name": "siggraph-website-backend",
-  "author": "Thomas Shaw <printer.83mph@gmail.com>",
+  "name": "backend",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",

@@ -12,7 +12,7 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
-  basePath: basePath,
+  basePath,
 }
 
 module.exports = withPlugins([withLqipImages], nextConfig)
