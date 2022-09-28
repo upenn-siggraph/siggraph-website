@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-
 import { MenuAlt2Icon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
+
 import useLockBody from '../hooks/use-lock-body'
 import useBasePath from '../hooks/use-base-path'
 

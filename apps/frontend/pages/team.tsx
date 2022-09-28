@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import { SectionHeader } from '../components/common'
 import TeamList from '../components/team/team-list'
 

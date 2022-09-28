@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Error from 'next/error'
 import Head from 'next/head'
+
 import { getEventFromSlug, getEventPaths } from '../../lib/api'
 import { EventData, StrapiItem } from '../../lib/types'
 
