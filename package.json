@@ -3,6 +3,10 @@
   "author": "Thomas Shaw <printer.83mph@gmail.com>",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "turbo build",
