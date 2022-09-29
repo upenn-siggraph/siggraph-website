@@ -1,11 +1,10 @@
-import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { MenuAlt2Icon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
 
-import useLockBody from '../hooks/use-lock-body'
-import useBasePath from '../hooks/use-base-path'
+import useLockBody from 'hooks/use-lock-body'
+import useBasePath from 'hooks/use-base-path'
 
 const pages = [
   {
@@ -62,7 +61,7 @@ const VideoBG = () => {
 const Nav = () => {
   const [open, setOpen] = useState(false)
   const { getPath } = useBasePath()
-  const { pathname } = useRouter()
+  const { pathname, push } = useRouter()
 
   useLockBody(open)
 
@@ -109,22 +108,21 @@ const Nav = () => {
                     onPage ? 'border-l-white' : ''
                   }`}
                 >
-                  <Link href={href}>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a
-                      className={navLinkStyle}
-                      role="link"
-                      tabIndex={0}
-                      onKeyPress={(evt) => {
-                        if (evt.key === 'Enter') setOpen(false)
-                      }}
-                      onClick={() => {
-                        setOpen(false)
-                      }}
-                    >
-                      {name}
-                    </a>
-                  </Link>
+                  <button
+                    type="button"
+                    className={navLinkStyle}
+                    tabIndex={0}
+                    onKeyPress={async (evt) => {
+                      await push(href)
+                      if (evt.key === 'Enter') setOpen(false)
+                    }}
+                    onClick={async () => {
+                      await push(href)
+                      setOpen(false)
+                    }}
+                  >
+                    {name}
+                  </button>
                 </li>
               )
             })}

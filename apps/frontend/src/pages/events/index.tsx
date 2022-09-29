@@ -1,8 +1,8 @@
 import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 
-import { SectionHeader } from '../../components/common'
-import { getDisplayEvent, getEvents } from '../../lib/api'
+import { SectionHeader } from 'components/common'
+import { getDisplayEvent, getEvents } from 'lib/api'
 
 export const getStaticProps = async () => {
   const [eventsData, displayEventData] = await Promise.all([
@@ -15,13 +15,11 @@ export const getStaticProps = async () => {
       eventsData,
       displayEventData,
     },
-    revalidate: process.env.NODE_ENV === 'development' ? 10 : 10 * 60,
+    revalidate: 30,
   }
 }
 
-type ServerSideProps = InferGetStaticPropsType<typeof getStaticProps>
-
-const EventsPage = (props: ServerSideProps) => {
+const EventsPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { eventsData, displayEventData } = props
   return (
     <>

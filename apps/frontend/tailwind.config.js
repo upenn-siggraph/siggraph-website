@@ -1,12 +1,12 @@
-const colors = require("tailwindcss/colors")
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ['{pages,lib,components,hooks}/**/*.{html,ts,tsx}'],
+  content: ['src/{pages,lib,components,hooks}/**/*.{html,ts,tsx}'],
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
       // 'xl': '1280px',
     },
     colors: {
@@ -28,11 +28,11 @@ module.exports = {
         1: '#FBBD4A',
         2: '#FE7D67',
         3: '#FF5195',
-        4: 'B181B7'
-      }
+        4: 'B181B7',
+      },
     },
     extend: {},
   },
   plugins: [],
-  darkMode: 'media'
+  darkMode: 'media',
 }

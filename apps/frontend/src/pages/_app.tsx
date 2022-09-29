@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import useBasePath from '../hooks/use-base-path'
 
-import '../styles/global.scss'
+import 'styles/global.css'
 
 // favicon hack here
 

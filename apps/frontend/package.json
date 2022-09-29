@@ -15,15 +15,16 @@
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "dotenv": "^16.0.0",
+    "lqip-modern": "^1.2.0",
     "next": "^12.3.1",
-    "next-compose-plugins": "^2.2.1",
-    "next-lqip-images": "^0.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^8.33.1",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "tailwindcss": "^3.0.19"
   },
   "devDependencies": {
+    "@types/lqip-modern": "^1.1.2",
     "@types/node": "18.7.23",
     "@types/react": "18.0.21",
     "@typescript-eslint/eslint-plugin": "5.13.0",
@@ -44,7 +45,6 @@
     "next": "^12.3.1",
     "postcss": "^8.4.12",
     "prettier": "^2.5.1",
-    "tailwindcss": "^3.0.19",
     "typescript": "4.5.5"
   }
 }

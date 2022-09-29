@@ -1,12 +1,21 @@
-import team from '../../lib/team'
 import LazyImage from '../util/lazy-image'
 
-const TeamList = () => (
+const TeamList = ({
+  team,
+}: {
+  team: {
+    name: string
+    role: string
+    image: string
+    lqip: string
+  }[]
+}) => (
   <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-    {team.map(({ name, role, image }) => (
+    {team.map(({ name, role, image, lqip }) => (
       <li key={name} className="mb-4">
         <LazyImage
           image={image}
+          lqip={lqip}
           width={300}
           height={300}
           alt={name}

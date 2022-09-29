@@ -2,14 +2,16 @@ import { ComponentPropsWithoutRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 interface LazyImageProps extends ComponentPropsWithoutRef<'div'> {
-  image: LqipImage
+  image: string
+  lqip: string
   width: number
   height: number
   alt: string
 }
 
 const LazyImage = ({
-  image: { dataURI, src },
+  image,
+  lqip,
   alt,
   width,
   height,
@@ -23,16 +25,21 @@ const LazyImage = ({
     <div
       {...props}
       ref={ref}
-      style={{
-        background: `center / cover no-repeat url(${dataURI})`,
-      }}
-      className={`overflow-hidden flex flex-col justify-center items-center ${
+      className={`relative overflow-hidden flex flex-col justify-center items-center ${
         className || ''
       }`}
     >
+      <div
+        className="absolute inset-0 blur-[15px] scale-110"
+        style={{
+          background: `center / cover no-repeat url(${lqip})`,
+        }}
+      />
       {inView && (
+        // Custom image implementation.
+        // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={src}
+          src={image}
           alt={alt}
           width={width}
           height={height}
@@ -40,8 +47,8 @@ const LazyImage = ({
           onLoad={() => {
             setLoaded(true)
           }}
-          className={`transition-[opacity,filter] duration-200 w-full h-auto ${
-            loaded ? '' : 'opacity-0 blur-[12px]'
+          className={`relative transition-[opacity,filter] duration-200 w-full h-auto ${
+            loaded ? '' : 'blur-[15px] opacity-0'
           }`}
         />
       )}
