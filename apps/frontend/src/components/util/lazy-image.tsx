@@ -25,12 +25,12 @@ export const LazyImage = ({
     <div
       {...props}
       ref={ref}
-      className={`relative overflow-hidden flex flex-col justify-center items-center ${
+      className={`relative flex flex-col items-center justify-center overflow-hidden ${
         className || ''
       }`}
     >
       <div
-        className="absolute inset-0 blur-[15px] scale-110"
+        className="absolute inset-0 scale-110 blur-[15px]"
         style={{
           background: `center / cover no-repeat url(${lqip})`,
         }}
@@ -47,8 +47,8 @@ export const LazyImage = ({
           onLoad={() => {
             setLoaded(true)
           }}
-          className={`relative transition-[opacity,filter] duration-200 w-full h-auto ${
-            loaded ? '' : 'blur-[15px] opacity-0'
+          className={`relative h-auto w-full transition-[opacity,filter] duration-200 ${
+            loaded ? '' : 'opacity-0 blur-[15px]'
           }`}
         />
       )}

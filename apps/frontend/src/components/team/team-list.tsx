@@ -10,7 +10,7 @@ export const TeamList = ({
     lqip: string
   }[]
 }) => (
-  <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+  <ul className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
     {team.map(({ name, role, image, lqip }) => (
       <li key={name} className="mb-4">
         <LazyImage
@@ -19,7 +19,7 @@ export const TeamList = ({
           width={300}
           height={300}
           alt={name}
-          className="aspect-square w-full h-auto rounded-xl shadow-lg"
+          className="aspect-square h-auto w-full rounded-xl shadow-lg"
         />
         <div className="m-4">
           <h3 className="text-xl font-bold dark:text-gray-900">{name}</h3>

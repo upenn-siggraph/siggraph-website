@@ -7,7 +7,7 @@ export const Container = ({ children }: BasicWrapperProps) => (
 )
 
 export const SectionHeader = ({ children }: BasicWrapperProps) => (
-  <h1 className="text-6xl font-black tracking-tight text-gray-100 dark:text-gray-900 mt-8 mb-12 drop-shadow self-center">
+  <h1 className="mt-8 mb-12 self-center text-6xl font-black tracking-tight text-gray-100 drop-shadow dark:text-gray-900">
     {children}
   </h1>
 )

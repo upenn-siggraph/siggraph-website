@@ -49,7 +49,7 @@ const VideoBG = () => {
     <video
       autoPlay
       muted
-      className="h-full w-full min-h-[56.25vw] min-w-[177.78vh]"
+      className="h-full min-h-[56.25vw] w-full min-w-[177.78vh]"
       ref={videoRef}
       loop
     >
@@ -68,11 +68,11 @@ export const Nav = () => {
   return (
     <nav className="sticky top-0 z-10">
       <div
-        className={`mx-[-1rem] bg-white dark:bg-gray-100 flex items-center ${navShadow}`}
+        className={`mx-[-1rem] flex items-center bg-white dark:bg-gray-100 ${navShadow}`}
       >
         <button
           type="button"
-          className={`p-6 z-[11] transition-[color] ${
+          className={`z-[11] p-6 transition-[color] ${
             open ? 'text-white' : ''
           }`}
           onClick={() => setOpen((o) => !o)}
@@ -80,9 +80,9 @@ export const Nav = () => {
           <span className="sr-only">{`${
             open ? 'Close' : 'Open'
           } Navigation Menu`}</span>
-          <MenuAlt2Icon className="w-5 h-5" />
+          <MenuAlt2Icon className="h-5 w-5" />
         </button>
-        <h2 className="font-extrabold text-2xl">UPenn Siggraph</h2>
+        <h2 className="text-2xl font-extrabold">UPenn Siggraph</h2>
       </div>
       <Transition
         show={open}
@@ -94,11 +94,11 @@ export const Nav = () => {
         leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
       >
         <VideoBG />
-        <div className="absolute inset-0 container mx-auto px-4 top-14">
-          <h2 className="font-black text-white tracking-tight text-6xl my-4 drop-shadow">
+        <div className="container absolute inset-0 top-14 mx-auto px-4">
+          <h2 className="my-4 text-6xl font-black tracking-tight text-white drop-shadow">
             UPenn Siggraph
           </h2>
-          <ul className="text-white tracking-wide drop-shadow">
+          <ul className="tracking-wide text-white drop-shadow">
             {pages.map(({ name, href }) => {
               const onPage = pathname === href
               return (

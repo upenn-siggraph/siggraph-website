@@ -18,13 +18,13 @@ const Home: NextPage = () => (
       />
     </Head>
     {/* this below is just placeholder before splash is implemented :) */}
-    <div className="h-[42rem] flex flex-col items-start justify-center">
-      <h1 className="font-black tracking-tight text-4xl lg:text-8xl mb-6">
+    <div className="flex h-[42rem] flex-col items-start justify-center">
+      <h1 className="mb-6 text-4xl font-black tracking-tight lg:text-8xl">
         UPenn Siggraph
       </h1>
       <Link href="/team">
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="underline text-2xl hover:text-gray-600">Meet the Team</a>
+        <a className="text-2xl underline hover:text-gray-600">Meet the Team</a>
       </Link>
     </div>
   </Container>
