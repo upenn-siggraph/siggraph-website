@@ -3,8 +3,8 @@ import { MenuAlt2Icon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 import { Transition } from '@headlessui/react'
 
-import useLockBody from 'hooks/use-lock-body'
-import useBasePath from 'hooks/use-base-path'
+import { useLockBody } from 'hooks/use-lock-body'
+import { useBasePath } from 'hooks/use-base-path'
 
 const pages = [
   {
@@ -58,7 +58,7 @@ const VideoBG = () => {
   )
 }
 
-const Nav = () => {
+export const Nav = () => {
   const [open, setOpen] = useState(false)
   const { getPath } = useBasePath()
   const { pathname, push } = useRouter()
@@ -135,5 +135,3 @@ const Nav = () => {
     </nav>
   )
 }
-
-export default Nav

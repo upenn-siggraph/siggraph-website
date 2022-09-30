@@ -1,3 +1,1 @@
-const EventList = () => <>todo</>
-
-export default EventList
+export const EventList = () => <>todo</>

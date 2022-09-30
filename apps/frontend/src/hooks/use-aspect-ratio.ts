@@ -5,7 +5,7 @@ const getRatio = () => {
   return window.innerWidth / window.innerHeight
 }
 
-const useAspectRatio = () => {
+export const useAspectRatio = () => {
   const [ratio, setRatio] = useState<number>(1)
 
   const resizeCallback = useCallback(() => {
@@ -23,5 +23,3 @@ const useAspectRatio = () => {
 
   return ratio
 }
-
-export default useAspectRatio

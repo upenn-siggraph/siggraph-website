@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const useLockBody = (locked: boolean) => {
+export const useLockBody = (locked: boolean) => {
   useEffect(() => {
     if (locked) {
       document.body.classList.add('overflow-y-hidden')
@@ -12,5 +12,3 @@ const useLockBody = (locked: boolean) => {
     return () => {}
   }, [locked])
 }
-
-export default useLockBody

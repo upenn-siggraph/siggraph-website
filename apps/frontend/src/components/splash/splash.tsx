@@ -1,4 +1,4 @@
-const Splash = () => (
+export const Splash = () => (
   <article>
     <div className="relative">
       <div className="absolute">
@@ -10,5 +10,3 @@ const Splash = () => (
     </div>
   </article>
 )
-
-export default Splash

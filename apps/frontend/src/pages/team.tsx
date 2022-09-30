@@ -5,7 +5,7 @@ import Head from 'next/head'
 import lqip from 'lqip-modern'
 
 import { SectionHeader } from '../components/common'
-import TeamList from '../components/team/team-list'
+import { TeamList } from '../components/team/team-list'
 
 import teamData from 'data/team.json'
 

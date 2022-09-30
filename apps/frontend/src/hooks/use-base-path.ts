@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useCallback } from 'react'
 
-const useBasePath = () => {
+export const useBasePath = () => {
   const { basePath } = useRouter()
 
   const getPath = useCallback(
@@ -12,5 +12,3 @@ const useBasePath = () => {
 
   return { basePath, getPath }
 }
-
-export default useBasePath

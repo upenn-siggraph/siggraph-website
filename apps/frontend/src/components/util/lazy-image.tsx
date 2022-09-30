@@ -9,7 +9,7 @@ interface LazyImageProps extends ComponentPropsWithoutRef<'div'> {
   alt: string
 }
 
-const LazyImage = ({
+export const LazyImage = ({
   image,
   lqip,
   alt,
@@ -55,5 +55,3 @@ const LazyImage = ({
     </div>
   )
 }
-
-export default LazyImage

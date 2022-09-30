@@ -1,6 +1,6 @@
-import LazyImage from '../util/lazy-image'
+import { LazyImage } from '../util/lazy-image'
 
-const TeamList = ({
+export const TeamList = ({
   team,
 }: {
   team: {
@@ -29,5 +29,3 @@ const TeamList = ({
     ))}
   </ul>
 )
-
-export default TeamList
