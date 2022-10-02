@@ -2,7 +2,7 @@ import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 
 import { SectionHeader } from 'components/common'
-import { getDisplayEvent, getEvents } from 'lib/api'
+import { getDisplayEvent, getEvents } from 'lib/strapi'
 
 export const getStaticProps = async () => {
   const [eventsData, displayEventData] = await Promise.all([

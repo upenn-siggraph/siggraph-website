@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useCallback } from 'react'
 
+// TODO: eventually if we host on some apex we won't need to worry about this
 export const useBasePath = () => {
   const { basePath } = useRouter()
 

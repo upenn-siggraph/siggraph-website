@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Container } from '../components/common'
+import { Container } from 'components/common'
 
 const Home: NextPage = () => (
   <Container>

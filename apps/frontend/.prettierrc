@@ -1,0 +1,6 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["tailwindcss"],
+  "endOfLine": "auto"
+}
