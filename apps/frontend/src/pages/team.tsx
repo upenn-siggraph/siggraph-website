@@ -4,9 +4,9 @@ import { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 import lqip from 'lqip-modern'
 
-import { SectionHeader } from 'components/common'
-import { TeamList } from 'components/team/team-list'
 import teamData from 'data/team.json'
+import { TeamList } from 'components/pages/team/team-list'
+import { PageHeader } from 'components/layout/common'
 
 export const getStaticProps = async () => {
   const { team: baseTeam, basePath } = teamData
@@ -33,6 +33,7 @@ const TeamPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   team,
 }) => (
   <>
+    {/* TODO: use NextSeo */}
     <Head>
       <title>UPenn Siggraph - Meet the Team</title>
       <meta
@@ -41,7 +42,7 @@ const TeamPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         passionate about interactive computer graphics."
       />
     </Head>
-    <SectionHeader>Meet the Team</SectionHeader>
+    <PageHeader>Meet the Team</PageHeader>
     <TeamList team={team} />
   </>
 )

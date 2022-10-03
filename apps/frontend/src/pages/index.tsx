@@ -2,10 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Container } from 'components/common'
-
 const Home: NextPage = () => (
-  <Container>
+  <>
     {/* TODO: use NextSeo */}
     <Head>
       <title>UPenn Siggraph</title>
@@ -27,7 +25,7 @@ const Home: NextPage = () => (
         <a className="text-2xl underline hover:text-gray-600">Meet the Team</a>
       </Link>
     </div>
-  </Container>
+  </>
 )
 
 export default Home

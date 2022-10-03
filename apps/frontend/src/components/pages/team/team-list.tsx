@@ -1,4 +1,4 @@
-import { LazyImage } from '../util/lazy-image'
+import { LazyImage } from 'components/util/lazy-image'
 
 export const TeamList = ({
   team,
