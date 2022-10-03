@@ -4951,10 +4951,10 @@ eslint-config-prettier@^8.5.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
-eslint-config-printer83mph@0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/eslint-config-printer83mph/-/eslint-config-printer83mph-0.1.5.tgz#1e612f5eb6de254f9880aa5547a93697a4764734"
-  integrity sha512-Ov7P3IfVKdqIrJCJRau2mW+Z+Rfheu2Gk/6eDUxvuouYbuRLL/G9m6ZOlLKN3y9DHFiWm4JtmhqLv3yKlQX48w==
+eslint-config-printer83mph@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/eslint-config-printer83mph/-/eslint-config-printer83mph-0.1.8.tgz#0434e5051d1f13a2038bdcaa647aedff2c3c3a17"
+  integrity sha512-g3bqlHVIRxnjOg/PmgKDLvia090yFOmSjHNNdk2nuaJoS6SqHOXT134ew9aqcQyHefoZfaAswNaohl36Rj5X5g==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
