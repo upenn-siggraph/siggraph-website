@@ -4,17 +4,17 @@
     {
       "name": "Amelia Peng",
       "role": "Co-President",
-      "image": "amelia.jpg"
+      "image": "amelia.webp"
     },
     {
       "name": "Sam Lee",
       "role": "Co-President",
-      "image": "sam.jpeg"
+      "image": "sam.webp"
     },
     {
       "name": "Felicity Yick",
       "role": "Vice President",
-      "image": "felicity.jpeg"
+      "image": "felicity.webp"
     },
     {
       "name": "Logan Cho",
@@ -29,17 +29,17 @@
     {
       "name": "Cindy Xu",
       "role": "Social Event lead",
-      "image": "cindy.jpeg"
+      "image": "cindy.webp"
     },
     {
       "name": "Kisha Yan",
       "role": "Social Event Lead",
-      "image": "kisha.jpeg"
+      "image": "kisha.webp"
     },
     {
       "name": "Keyu Lu",
       "role": "Graphic Design",
-      "image": "keyu.png"
+      "image": "keyu.webp"
     },
     {
       "name": "Jackie Li",
@@ -49,7 +49,7 @@
     {
       "name": "Nicole Chau",
       "role": "Graphic Design",
-      "image": "nicole.png"
+      "image": "nicole.webp"
     },
     {
       "name": "Thomas Shaw",
@@ -59,12 +59,12 @@
     {
       "name": "Aditya Gupta",
       "role": "Secretary",
-      "image": "aditya.jpg"
+      "image": "aditya.webp"
     },
     {
       "name": "Sebastian Vargas",
       "role": "Master's Liason",
-      "image": "sebastian.png"
+      "image": "sebastian.webp"
     }
   ]
 }
