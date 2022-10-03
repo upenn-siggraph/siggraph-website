@@ -1,27 +1,19 @@
+import { fetcher } from 'lib/server/strapi'
 import {
+  StrapiCollection,
   EventData,
   Identifier,
-  StrapiCollection,
-  StrapiResponse,
   StrapiSingle,
-} from './types'
-
-/* eslint-disable import/prefer-default-export */
-const apiUrl = process.env.STRAPI_URL || 'http://localhost:1337/api'
-
-export const fetcher = <T = any>(url: string): Promise<StrapiResponse<T>> =>
-  fetch(`${apiUrl}${url}`, {
-    headers: { Authorization: `bearer ${process.env.API_TOKEN}` },
-  }).then((r) => r.json())
+} from 'lib/types'
 
 export const getEvents = async () =>
-  (await fetcher<StrapiCollection<EventData>>('/events')).data
+  (await fetcher<StrapiCollection<EventData>>('events')).data
 
 export const getEventPaths = async (events?: StrapiCollection<EventData>) =>
   (events || (await getEvents())).map(({ attributes: { slug } }) => slug)
 
 export const getEventFromId = async (id: Identifier) =>
-  (await fetcher(`/events/${id}?populate=*`)).data
+  (await fetcher(`events/${id}?populate=*`)).data
 
 export const getEventFromSlug = async (
   slug: string,
@@ -32,5 +24,5 @@ export const getEventFromSlug = async (
 }
 
 export const getDisplayEvent = async () =>
-  (await fetcher<StrapiSingle<EventData>>('/display-event?populate=*')).data
+  (await fetcher<StrapiSingle<EventData>>('display-event?populate=*')).data
     .attributes.event.data
