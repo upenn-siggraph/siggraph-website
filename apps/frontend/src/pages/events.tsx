@@ -2,25 +2,21 @@ import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 
 import { PageHeader } from 'components/layout/common'
-import { getDisplayEvent, getEvents } from 'lib/server/strapi/events'
+import { getEvents } from 'lib/server/strapi/events'
+import { EventList } from 'components/pages/events/event-list'
 
 export const getStaticProps = async () => {
-  const [eventsData, displayEventData] = await Promise.all([
-    getEvents(),
-    getDisplayEvent(),
-  ])
+  const events = await getEvents()
 
   return {
-    props: {
-      eventsData,
-      displayEventData,
-    },
+    props: { events },
     revalidate: 30,
   }
 }
 
 const EventsPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { eventsData, displayEventData } = props
+  const { events } = props
+
   return (
     <>
       {/* TODO: use NextSeo */}
@@ -29,8 +25,7 @@ const EventsPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <meta name="description" content="TODO: EVENTS DESCRIPTION" />
       </Head>
       <PageHeader>Events</PageHeader>
-      <p>{JSON.stringify(eventsData)}</p>
-      <p>{JSON.stringify(displayEventData)}</p>
+      <EventList events={events} />
     </>
   )
 }

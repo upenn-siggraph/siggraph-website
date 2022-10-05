@@ -4,7 +4,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 const Document = () => (
   <Html lang="en">
     <Head />
-    <body className="dark:bg-gray-100 dark:text-gray-900">
+    <body className="selection:bg-logo-gradient-3 selection:text-white dark:bg-gray-100 dark:text-gray-900">
       <Main />
       <NextScript />
     </body>

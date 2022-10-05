@@ -1,13 +1,8 @@
 import { fetcher } from 'lib/server/strapi'
-import {
-  StrapiCollection,
-  EventData,
-  Identifier,
-  StrapiSingle,
-} from 'lib/types'
+import { StrapiCollection, EventData, Identifier } from 'lib/types'
 
 export const getEvents = async () =>
-  (await fetcher<StrapiCollection<EventData>>('events')).data
+  (await fetcher<StrapiCollection<EventData>>('events?sort=start')).data
 
 export const getEventPaths = async (events?: StrapiCollection<EventData>) =>
   (events || (await getEvents())).map(({ attributes: { slug } }) => slug)
@@ -22,7 +17,3 @@ export const getEventFromSlug = async (
   const eventsList = events || (await getEvents())
   return eventsList.find(({ attributes: { slug: s } }) => s === slug)
 }
-
-export const getDisplayEvent = async () =>
-  (await fetcher<StrapiSingle<EventData>>('display-event?populate=*')).data
-    .attributes.event.data

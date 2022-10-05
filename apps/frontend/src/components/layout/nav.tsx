@@ -82,7 +82,7 @@ export const Nav = () => {
           } Navigation Menu`}</span>
           <MenuAlt2Icon className="h-5 w-5" />
         </button>
-        <h2 className="text-2xl font-extrabold">UPenn Siggraph</h2>
+        <h2 className="select-none text-2xl font-extrabold">UPenn Siggraph</h2>
       </div>
       <Transition
         show={open}
@@ -94,7 +94,7 @@ export const Nav = () => {
         leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
       >
         <VideoBG />
-        <div className="container absolute inset-0 top-14 mx-auto px-4">
+        <div className="container absolute inset-0 top-14 mx-auto select-none px-4">
           <h2 className="my-4 text-6xl font-black tracking-tight text-white drop-shadow">
             UPenn Siggraph
           </h2>

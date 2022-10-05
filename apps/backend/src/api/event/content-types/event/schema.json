@@ -42,11 +42,6 @@
     "location": {
       "type": "string"
     },
-    "visible": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
     "slug": {
       "type": "string",
       "required": true,
