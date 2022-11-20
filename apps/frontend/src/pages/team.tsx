@@ -17,9 +17,8 @@ export const getStaticProps = async () => {
         // actual image is just in public directory
         image: path.join(basePath, image),
         // lqip image uses full path with process.cwd
-        lqip: await (
-          await lqip(imagePath, { outputFormat: 'webp' })
-        ).metadata.dataURIBase64,
+        lqip: (await lqip(imagePath, { outputFormat: 'webp' })).metadata
+          .dataURIBase64,
         ...member,
       }
     })

@@ -68,7 +68,7 @@ export const Nav = () => {
   return (
     <nav className="sticky top-0 z-10">
       <div
-        className={`mx-[-1rem] flex items-center bg-white dark:bg-gray-100 ${navShadow}`}
+        className={`mx-[-1rem] flex items-center bg-white dark:bg-black ${navShadow}`}
       >
         <button
           type="button"

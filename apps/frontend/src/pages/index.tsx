@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
+
+import { Pillars } from 'components/pages/home/pillars'
+import { Splash } from 'components/pages/home/splash'
 
 const Home: NextPage = () => (
   <>
@@ -16,15 +18,8 @@ const Home: NextPage = () => (
       />
     </Head>
     {/* this below is just placeholder before splash is implemented :) */}
-    <div className="flex h-[42rem] flex-col items-start justify-center">
-      <h1 className="mb-6 text-4xl font-black tracking-tight lg:text-8xl">
-        UPenn Siggraph
-      </h1>
-      <Link href="/team">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="text-2xl underline hover:text-gray-600">Meet the Team</a>
-      </Link>
-    </div>
+    <Splash />
+    <Pillars />
   </>
 )
 
