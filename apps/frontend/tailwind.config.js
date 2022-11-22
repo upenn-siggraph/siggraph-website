@@ -31,7 +31,11 @@ module.exports = {
         4: 'B181B7',
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        mono: ['Space Mono', 'monospace'],
+      },
+    },
   },
   plugins: [],
   darkMode: 'media',

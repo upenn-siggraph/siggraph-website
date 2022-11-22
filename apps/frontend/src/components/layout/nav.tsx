@@ -82,30 +82,33 @@ export const Nav = () => {
           } Navigation Menu`}</span>
           <MenuAlt2Icon className="h-5 w-5" />
         </button>
-        <h2 className="select-none text-2xl font-extrabold">UPenn Siggraph</h2>
+        <h2 className="select-none font-mono text-2xl font-bold tracking-tight">
+          UPenn Siggraph
+        </h2>
       </div>
       <Transition
         show={open}
-        className="fixed inset-0 h-screen w-full overflow-hidden
-            bg-gray-300 [clip-path:polygon(0_100%,100%_100%,100%_0,0_0)]"
+        className="fixed inset-0 h-screen w-full overflow-hidden bg-gray-300 [clip-path:polygon(0_100%,100%_100%,100%_0,0_0)]"
         enter="transition-height duration-300"
         enterFrom="[clip-path:polygon(0_0,100%_0,100%_0,0_0)]"
         leave="transition-[clip-path] duration-300"
         leaveTo="[clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)]"
       >
         <VideoBG />
-        <div className="container absolute inset-0 top-14 mx-auto select-none px-4">
-          <h2 className="my-4 text-6xl font-black tracking-tight text-white drop-shadow">
+        <div className="container absolute inset-0 top-14 mx-auto select-none px-4 font-mono text-white">
+          <h2 className="my-4 text-6xl font-black tracking-tight drop-shadow">
             UPenn Siggraph
           </h2>
-          <ul className="tracking-wide text-white drop-shadow">
+          <ul className="text-2xl font-normal drop-shadow">
             {pages.map(({ name, href }) => {
               const onPage = pathname === href
               return (
                 <li
                   key={href}
-                  className={`border-l-4 border-l-transparent ${
-                    onPage ? 'border-l-white' : ''
+                  className={`border-l-2 border-l-transparent ${
+                    onPage
+                      ? 'border-l-white font-bold italic'
+                      : 'font-normal hover:border-dotted hover:border-l-white'
                   }`}
                 >
                   <button

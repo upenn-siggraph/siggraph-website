@@ -4,7 +4,8 @@ import { useRouter } from 'next/router'
 import { EventCard } from './event-card'
 
 import { EventData, StrapiCollection } from 'lib/types'
-import { useEvents } from 'hooks/pages/useEvents'
+import { useEventSelection } from 'hooks/pages/use-event-selection'
+import Image from 'next/image'
 
 const MiniEventCard = ({
   eventData: { title },
@@ -26,9 +27,10 @@ export const EventList = ({
   events: StrapiCollection<EventData>
 }) => {
   const { replace } = useRouter()
-  const { prevEvents, currentEvent, nextEvents, setEventSlug } = useEvents({
-    events,
-  })
+  const { empty, prevEvents, currentEvent, nextEvents, setEventSlug } =
+    useEventSelection({
+      events: events || [],
+    })
 
   const setSlug = useCallback(
     (slug: string) => {
@@ -39,31 +41,48 @@ export const EventList = ({
   )
 
   return (
-    <div className="relative">
-      {/* prev events */}
-      <ul>
-        {prevEvents.map(({ attributes, id }) => (
-          <MiniEventCard
-            key={id}
-            eventData={attributes}
-            onClick={() => setSlug(attributes.slug)}
-          />
-        ))}
-      </ul>
+    <>
+      {empty || (
+        <div className="relative">
+          {/* prev events */}
+          <ul>
+            {prevEvents.map(({ attributes, id }) => (
+              <MiniEventCard
+                key={id}
+                eventData={attributes}
+                onClick={() => setSlug(attributes.slug)}
+              />
+            ))}
+          </ul>
 
-      {/* current event */}
-      <EventCard event={currentEvent.attributes} />
+          {/* current event */}
+          <EventCard event={currentEvent.attributes} />
 
-      {/* next events */}
-      <ul>
-        {nextEvents.map(({ attributes, id }) => (
-          <MiniEventCard
-            key={id}
-            eventData={attributes}
-            onClick={() => setSlug(attributes.slug)}
+          {/* next events */}
+          <ul>
+            {nextEvents.map(({ attributes, id }) => (
+              <MiniEventCard
+                key={id}
+                eventData={attributes}
+                onClick={() => setSlug(attributes.slug)}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
+      {empty && (
+        <div className="text-center text-xl">
+          {/* TODO: replace with graphic or something */}
+          <Image
+            className="rounded-full"
+            src="/image/team/aditya.webp"
+            alt="Sad"
+            width={300}
+            height={300}
           />
-        ))}
-      </ul>
-    </div>
+          <p className="mt-4 font-mono">No events at the moment... :(</p>
+        </div>
+      )}
+    </>
   )
 }
