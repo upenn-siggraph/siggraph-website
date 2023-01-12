@@ -18,7 +18,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <link rel="icon" href="favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="selection:bg-logo-gradient-3 selection:text-white dark:bg-black dark:text-gray-900">
+      <body className="scrollbar-rounded-sm scrollbar-thin scrollbar-track-white scrollbar-thumb-black selection:bg-logo-gradient-3 selection:text-white dark:bg-black dark:text-gray-900 dark:scrollbar-track-black dark:scrollbar-thumb-white">
         <div className="container mx-auto flex flex-col px-4">
           <Nav />
           {children}

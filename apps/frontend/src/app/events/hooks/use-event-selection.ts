@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 
 import { EventData, StrapiCollection, StrapiItem } from 'lib/types'
 
@@ -28,7 +28,6 @@ export const useEventSelection = ({
   events: StrapiCollection<EventData>
 }) => {
   // specified event from memo
-  const { replace } = useRouter()
   const searchParams = useSearchParams()
 
   // if we have no events
