@@ -33,7 +33,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        mono: ['Space Mono', 'monospace'],
+        mono: ['var(--font-space-mono)', 'monospace'],
       },
     },
   },

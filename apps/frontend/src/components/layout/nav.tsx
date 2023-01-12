@@ -21,11 +21,6 @@ const pages = [
   },
 ]
 
-const navShadow =
-  '[box-shadow:0_-7px_12px_rgba(0,0,0,.5)] sm:[box-shadow:0_10px_12px_-17px_rgba(0,0,0,.5)]'
-
-const navLinkStyle = 'block p-4 text-xl font-semibold inline-block w-auto'
-
 const VideoBG = () => {
   const { getPath } = useBasePath()
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -60,15 +55,16 @@ const VideoBG = () => {
 
 export const Nav = () => {
   const [open, setOpen] = useState(false)
+
   const { getPath } = useBasePath()
-  const { pathname, push } = useRouter()
+  const router = useRouter()
 
   useLockBody(open)
 
   return (
     <nav className="sticky top-0 z-10">
       <div
-        className={`mx-[-1rem] flex items-center bg-white dark:bg-black ${navShadow}`}
+        className={`mx-[-1rem] flex items-center bg-white [box-shadow:0_-7px_12px_rgba(0,0,0,.5)] dark:bg-black sm:[box-shadow:0_10px_12px_-17px_rgba(0,0,0,.5)]`}
       >
         <button
           type="button"
@@ -99,9 +95,9 @@ export const Nav = () => {
           <h2 className="my-4 text-6xl font-black tracking-tight drop-shadow">
             UPenn Siggraph
           </h2>
-          <ul className="text-2xl font-normal drop-shadow">
+          <ul className="flex flex-col text-2xl font-normal drop-shadow">
             {pages.map(({ name, href }) => {
-              const onPage = pathname === href
+              const onPage = router.pathname === href
               return (
                 <li
                   key={href}
@@ -113,14 +109,10 @@ export const Nav = () => {
                 >
                   <button
                     type="button"
-                    className={navLinkStyle}
+                    className={'w-full p-4 text-left text-xl font-semibold'}
                     tabIndex={0}
-                    onKeyPress={async (evt) => {
-                      await push(href)
-                      if (evt.key === 'Enter') setOpen(false)
-                    }}
                     onClick={async () => {
-                      await push(href)
+                      router.push(href)
                       setOpen(false)
                     }}
                   >

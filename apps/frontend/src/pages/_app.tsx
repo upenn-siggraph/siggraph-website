@@ -5,6 +5,7 @@ import 'styles/global.css'
 
 import { useBasePath } from 'hooks/util/use-base-path'
 import { Nav } from 'components/layout/nav'
+import { fontsClassName } from 'styles/fonts'
 
 // favicon base path hack
 const App = ({ Component, pageProps }: AppProps) => {
@@ -15,7 +16,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <link rel="icon" href={getPath('favicon.ico')} />
       </Head>
-      <div className="container mx-auto flex flex-col px-4">
+      <div className={`container mx-auto flex flex-col px-4 ${fontsClassName}`}>
         <Nav />
         <Component {...pageProps} />
       </div>
