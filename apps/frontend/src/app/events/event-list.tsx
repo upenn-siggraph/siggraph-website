@@ -1,11 +1,17 @@
-import { useCallback } from 'react'
-import { useRouter } from 'next/router'
+'use client'
 
-import { EventCard } from './event-card'
+import { useCallback } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 import { EventData, StrapiCollection } from 'lib/types'
-import { useEventSelection } from 'hooks/pages/use-event-selection'
-import Image from 'next/image'
+import { useEventSelection } from './hooks/use-event-selection'
+import Image from 'next/legacy/image'
+
+const EventCard = ({ event }: { event: EventData }) => (
+  <article className="grid bg-gray-100 ring-1 ring-gray-300">
+    <h2>{event.title}</h2>
+  </article>
+)
 
 const MiniEventCard = ({
   eventData: { title },
@@ -26,7 +32,7 @@ export const EventList = ({
 }: {
   events: StrapiCollection<EventData>
 }) => {
-  const { replace } = useRouter()
+  const searchParams = useSearchParams()
   const { empty, prevEvents, currentEvent, nextEvents, setEventSlug } =
     useEventSelection({
       events: events || [],
@@ -35,9 +41,10 @@ export const EventList = ({
   const setSlug = useCallback(
     (slug: string) => {
       setEventSlug(slug)
-      replace({ query: { slug } })
+      // @ts-expect-error // THIS IS SO TROLL
+      searchParams.set('slug', slug)
     },
-    [replace, setEventSlug]
+    [searchParams, setEventSlug]
   )
 
   return (

@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 import { EventData, StrapiCollection, StrapiItem } from 'lib/types'
 
@@ -28,10 +28,8 @@ export const useEventSelection = ({
   events: StrapiCollection<EventData>
 }) => {
   // specified event from memo
-  const {
-    query: { slug: querySlug },
-    replace,
-  } = useRouter()
+  const { replace } = useRouter()
+  const searchParams = useSearchParams()
 
   // if we have no events
   const empty = events.length === 0
@@ -50,14 +48,12 @@ export const useEventSelection = ({
 
   // get event slug from query, or next upcoming
   const eventSlug = useMemo(() => {
-    if (querySlug === undefined) {
+    const querySlug = searchParams.get('slug')
+    if (querySlug === '') {
       return nextUpcomingEventSlug
     }
-    if (typeof querySlug === 'string') {
-      return querySlug
-    }
-    return querySlug.join('')
-  }, [nextUpcomingEventSlug, querySlug])
+    return querySlug
+  }, [searchParams, nextUpcomingEventSlug])
 
   // get event index
   const eventIndex = useMemo(() => {
@@ -78,9 +74,10 @@ export const useEventSelection = ({
   // set new slug
   const setEventSlug = useCallback(
     (slug: string) => {
-      replace({ query: { slug } })
+      // @ts-expect-error // THIS IS SO TROLL
+      searchParams.set('slug', slug)
     },
-    [replace]
+    [searchParams]
   )
 
   const prevEvents = useMemo(

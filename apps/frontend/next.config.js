@@ -9,6 +9,9 @@ if (process.env.BASE_PATH) console.log(`Using custom base path ${basePath}`)
 const nextConfig = {
   reactStrictMode: true,
   basePath,
+  experimental: {
+    appDir: true,
+  },
 }
 
 module.exports = nextConfig

@@ -1,3 +1,5 @@
+'use client'
+
 import { ComponentPropsWithoutRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
