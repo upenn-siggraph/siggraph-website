@@ -112,7 +112,7 @@ export const Nav = () => {
                     className={'w-full p-4 text-left text-xl font-semibold'}
                     tabIndex={0}
                     onClick={async () => {
-                      router.push(href)
+                      await router.push(href)
                       setOpen(false)
                     }}
                   >
