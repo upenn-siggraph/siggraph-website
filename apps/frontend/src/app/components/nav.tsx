@@ -55,6 +55,7 @@ const VideoBG = () => {
 
 export const Nav = () => {
   const [open, setOpen] = useState(false)
+
   const router = useRouter()
   const pathname = usePathname()
 
