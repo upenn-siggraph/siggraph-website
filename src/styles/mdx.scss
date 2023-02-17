@@ -1,0 +1,13 @@
+.mdx {
+  @apply flex flex-col gap-1;
+
+  a {
+    @apply underline;
+  }
+
+  ul > li {
+    &::before {
+      @apply [content:'-_'];
+    }
+  }
+}
