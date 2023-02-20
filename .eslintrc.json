@@ -11,16 +11,13 @@
       }
     ],
 
+    "import/prefer-default-export": "off",
     "import/order": ["warn", { "newlines-between": "always" }]
   },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": [
-        "airbnb-typescript",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
-      ],
+      "extends": ["airbnb-typescript", "plugin:@typescript-eslint/recommended"],
       "parserOptions": {
         "project": "tsconfig.json"
       },

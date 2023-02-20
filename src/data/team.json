@@ -1,0 +1,70 @@
+{
+  "basePath": "image/team",
+  "team": [
+    {
+      "name": "Amelia Peng",
+      "role": "Co-President",
+      "image": "amelia.webp"
+    },
+    {
+      "name": "Sam Lee",
+      "role": "Co-President",
+      "image": "sam.webp"
+    },
+    {
+      "name": "Felicity Yick",
+      "role": "Vice President",
+      "image": "felicity.webp"
+    },
+    {
+      "name": "Logan Cho",
+      "role": "Treasurer",
+      "image": "logan.webp"
+    },
+    {
+      "name": "Elyssa Chou",
+      "role": "External Relations Chair",
+      "image": "elyssa.webp"
+    },
+    {
+      "name": "Cindy Xu",
+      "role": "Social Event lead",
+      "image": "cindy.webp"
+    },
+    {
+      "name": "Kisha Yan",
+      "role": "Social Event Lead",
+      "image": "kisha.webp"
+    },
+    {
+      "name": "Keyu Lu",
+      "role": "Graphic Design",
+      "image": "keyu.webp"
+    },
+    {
+      "name": "Jackie Li",
+      "role": "Graphic Design",
+      "image": "jackie.webp"
+    },
+    {
+      "name": "Nicole Chau",
+      "role": "Graphic Design",
+      "image": "nicole.webp"
+    },
+    {
+      "name": "Thomas Shaw",
+      "role": "Webmaster",
+      "image": "thomas.webp"
+    },
+    {
+      "name": "Aditya Gupta",
+      "role": "Secretary",
+      "image": "aditya.webp"
+    },
+    {
+      "name": "Sebastian Vargas",
+      "role": "Master's Liason",
+      "image": "sebastian.webp"
+    }
+  ]
+}

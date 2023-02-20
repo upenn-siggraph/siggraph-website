@@ -12,13 +12,16 @@
     "@mdx-js/react": "^2.3.0",
     "@next/font": "13.1.6",
     "@next/mdx": "^13.1.6",
+    "lqip-modern": "^2.0.0",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.4.2",
     "sass": "^1.58.2"
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.3.0",
+    "@types/lqip-modern": "^1.1.2",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
