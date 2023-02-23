@@ -7,13 +7,13 @@ import { PhillyModel } from './3d/philly'
 
 function CameraRotation() {
   useFrame(({ camera }, delta) => {
-    camera.rotateOnWorldAxis(new Vector3(0, 1, 0), 0.1 * delta)
+    // camera.rotateOnWorldAxis(new Vector3(0, 1, 0), -0.1 * delta)
   })
   return (
     <PerspectiveCamera
       makeDefault
-      position={new Vector3(80, 20, 0)}
-      rotation={new Euler(-0.15, 0, 0)}
+      position={new Vector3(-100, 20, 0)}
+      rotation={new Euler(-0.15, -Math.PI * 0.5, 0, 'YXZ')}
     />
   )
 }

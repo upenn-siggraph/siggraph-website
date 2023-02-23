@@ -6,52 +6,33 @@ Command: npx gltfjsx@6.1.4 public/3d/philly.glb --transform
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GroupProps, useFrame } from '@react-three/fiber'
-import type { Group, Material } from 'three'
+import { Material, Vector3 } from 'three'
 
 import { WobblyWireMaterial } from './shaders/wobbly-wire'
 
 export function PhillyModel(props: GroupProps) {
   const materialRef = useRef<Material>(
-    new WobblyWireMaterial({ wireframe: true })
+    new WobblyWireMaterial({
+      wireframe: true,
+      uniforms: {
+        cameraPos: { value: new Vector3(0, 0, 0) },
+        color: { value: new Vector3(1, 1, 1) },
+        time: { value: 0 },
+      },
+    })
   )
   const { nodes } = useGLTF('/3d/philly.glb')
   useFrame((state, delta) => {
-    materialRef.current.setValues()
+    materialRef.current.time += delta
   })
   return (
     <group {...props} dispose={null}>
       <mesh
-        geometry={nodes.Areasbuilding.geometry}
+        geometry={nodes.AreasJoinedBuildings.geometry}
         material={materialRef.current}
-        position={[341.3, 0, -0.54]}
-        rotation={[0, 0.16, 0.01]}
-        scale={0.12}
-      />
-      <mesh
-        geometry={nodes.Areasbuilding001.geometry}
-        material={materialRef.current}
-        rotation={[0, 0.15, 0]}
-        scale={0.11}
-      />
-      <mesh
-        geometry={nodes.Areashighway.geometry}
-        material={materialRef.current}
-        position={[341.3, 0, -0.54]}
-        rotation={[0, 0.16, 0.01]}
-        scale={0.12}
-      />
-      <mesh
-        geometry={nodes.Areasnatural.geometry}
-        material={materialRef.current}
-        position={[341.3, 0, -0.54]}
-        rotation={[0, 0.16, 0.01]}
-        scale={0.12}
-      />
-      <mesh
-        geometry={nodes.Areasnatural001.geometry}
-        material={materialRef.current}
-        rotation={[0, 0.15, 0]}
-        scale={0.11}
+        position={[0, 0, 0]}
+        rotation={[0, 0, 0]}
+        scale={1}
       />
     </group>
   )
