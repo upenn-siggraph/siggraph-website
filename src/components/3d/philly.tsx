@@ -28,7 +28,7 @@ export function PhillyModel(props: GroupProps) {
   return (
     <group {...props} dispose={null}>
       <mesh
-        geometry={nodes.AreasJoinedBuildings.geometry}
+        geometry={nodes.SmallerJoined.geometry}
         material={materialRef.current}
         position={[0, 0, 0]}
         rotation={[0, 0, 0]}

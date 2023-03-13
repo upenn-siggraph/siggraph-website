@@ -15,10 +15,11 @@ export const WobblyWireMaterial = shaderMaterial(
   void main() {
     vUv = uv;
     distance = length(position - cameraPos);
-    float waveOffset = distance * 0.001 - time * 0.5;
+    float waveOffset = distance * 0.01 - time * 0.5;
     waveIntensity = smoothstep(0.95, 1., (sin(waveOffset) + 1.) * 0.5);
     wave2Intensity = smoothstep(0.1, 1., (sin(waveOffset + radians(180.) + 1.) * 0.5));
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position + vec3(0, pow(waveIntensity, 8.) * 5., 0), 1.0);
+    vec3 actualPosition = position; // + vec3(0, pow(waveIntensity, 8.) * 5., 0);
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(actualPosition, 1.0);
   }
 `,
   /* glsl */ `
@@ -30,9 +31,10 @@ export const WobblyWireMaterial = shaderMaterial(
   varying float wave2Intensity;
 
   void main() {
-    // gl_FragColor.rgba = vec4(0.5 + 0.3 * sin(time) + color, 1.0);
-    // float distanceBasedWaveIntensity = clamp((waveIntensity * 0.8 + wave2Intensity * 0.5) * 1000. / clamp(distance, 1., 1000.), 0., 1.);
-    gl_FragColor.rgba = vec4(color * (pow(waveIntensity, 4.) * 1. + pow(wave2Intensity, 2.) * 0.8), 1);
+    float wave1DistBased = pow(waveIntensity, 3.) * clamp(20. / distance, 0., 1.);
+    float intensity = (wave1DistBased + pow(wave2Intensity, 2.) * 1.);
+    // float intensity = wave2Intensity;
+    gl_FragColor.rgba = vec4(vec3(1, 1, 1) * intensity, clamp(intensity, 0., 1.));
   }
 `
 )
