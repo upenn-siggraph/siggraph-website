@@ -3,3 +3,15 @@
 @tailwind utilities;
 
 @import './mdx';
+
+@layer base {
+  .font-outline-1 {
+    -webkit-text-stroke: 1px white;
+  }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px white;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px white;
+  }
+}

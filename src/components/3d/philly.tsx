@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 import { GroupProps, useFrame } from '@react-three/fiber'
 import { Material, Vector3 } from 'three'
 
-import { WobblyWireMaterial } from './shaders/wobbly-wire'
+import { WobblyWireMaterial } from '../../lib/shaders/wobbly-wire'
 
 export function PhillyModel(props: GroupProps) {
   const materialRef = useRef<Material>(
