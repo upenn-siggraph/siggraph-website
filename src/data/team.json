@@ -2,21 +2,6 @@
   "basePath": "image/team",
   "team": [
     {
-      "name": "Amelia Peng",
-      "role": "Co-President",
-      "image": "amelia.webp"
-    },
-    {
-      "name": "Sam Lee",
-      "role": "Co-President",
-      "image": "sam.webp"
-    },
-    {
-      "name": "Felicity Yick",
-      "role": "Vice President",
-      "image": "felicity.webp"
-    },
-    {
       "name": "Logan Cho",
       "role": "Treasurer",
       "image": "logan.webp"

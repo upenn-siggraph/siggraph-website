@@ -42,10 +42,12 @@ export default function Home({
       <main className="container mx-auto">
         <Nav />
         <Splash />
-        You had been trolled...{' '}
-        <Link href="/test" className="underline">
-          Go funny
-        </Link>
+        <p className="my-8">
+          You had been trolled...{' '}
+          <Link href="/test" className="underline">
+            Go funny
+          </Link>
+        </p>
         <TeamList team={team} />
       </main>
     </>
