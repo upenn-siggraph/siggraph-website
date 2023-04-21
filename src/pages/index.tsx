@@ -6,6 +6,7 @@ import Image from 'next/image'
 import TeamList from '@/components/team-list'
 import { getTeamData } from '@/lib/team'
 import Splash from '@/components/splash'
+import About from '@/components/about'
 import SiggraphLogo from '@/resources/image/upenn-siggraph-logo.svg'
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
@@ -42,12 +43,7 @@ export default function Home({
       <main className="container mx-auto">
         <Nav />
         <Splash />
-        <p className="my-8">
-          You had been trolled...{' '}
-          <Link href="/test" className="underline">
-            Go funny
-          </Link>
-        </p>
+        <About />
         <TeamList team={team} />
       </main>
     </>
