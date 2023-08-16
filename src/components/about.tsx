@@ -2,7 +2,6 @@ import Image from 'next/image'
 
 import OurChapter from '../resources/image/our-chapter2.svg'
 import MoreAbout from '../resources/image/more-about.svg'
-
 import Cubes from '../resources/image/cubes.png'
 
 export default function About() {

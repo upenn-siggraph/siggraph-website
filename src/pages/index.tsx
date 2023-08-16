@@ -1,4 +1,4 @@
-import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -9,7 +9,7 @@ import Splash from '@/components/splash'
 import About from '@/components/about'
 import SiggraphLogo from '@/resources/image/upenn-siggraph-logo.svg'
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
+export async function getStaticProps() {
   return {
     props: { team: await getTeamData() },
   }
