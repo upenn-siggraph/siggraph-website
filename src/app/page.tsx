@@ -1,24 +1,21 @@
-import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import Image from 'next/image'
 
-import TeamList from '@/components/team-list'
-import { getTeamData } from '@/lib/team'
-import Splash from '@/components/splash'
-import About from '@/components/about'
+import About from './about'
+import Splash from './splash'
+import TeamList from './team-list'
+
 import SiggraphLogo from '@/resources/image/upenn-siggraph-logo.svg'
-
-export async function getStaticProps() {
-  return {
-    props: { team: await getTeamData() },
-  }
-}
 
 function Nav() {
   return (
     <nav className="flex flex-row items-center py-5">
-      <Image src={SiggraphLogo} alt="UPenn Siggraph" width={300} />
+      <Image
+        src={SiggraphLogo as StaticImageData}
+        alt="UPenn Siggraph"
+        width={300}
+      />
       <Link href="/" className="ml-auto">
         EVENT NAME HERE!
       </Link>
@@ -26,9 +23,7 @@ function Nav() {
   )
 }
 
-export default function Home({
-  team,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -44,7 +39,7 @@ export default function Home({
         <Nav />
         <Splash />
         <About />
-        <TeamList team={team} />
+        <TeamList />
       </main>
     </>
   )

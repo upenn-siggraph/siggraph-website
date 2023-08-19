@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import OurChapter from '../resources/image/our-chapter2.svg'
 import MoreAbout from '../resources/image/more-about.svg'
@@ -12,13 +12,17 @@ export default function About() {
           <Image src={Cubes} alt="Yellow Cube" className="w-[60rem] pb-40" />
         </div>
         <div className="ml-12 flex basis-1/2 flex-col self-center">
-          <Image src={OurChapter} alt="Our Chapter" className="mb-12" />
+          <Image
+            src={OurChapter as StaticImageData}
+            alt="Our Chapter"
+            className="mb-12"
+          />
           <span className="pb-5 text-lg">
             Lorem ipsum siat beniere esse insert random Latin here fiat fecem
             lorem die ablative absolute explanation on what we do etc etc etc
           </span>
           <Image
-            src={MoreAbout}
+            src={MoreAbout as StaticImageData}
             alt="More About Us"
             className="mt-6 self-start"
           />

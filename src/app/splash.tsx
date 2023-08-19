@@ -1,7 +1,9 @@
+'use client'
+
 import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Euler, Vector3 } from 'three'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { HiArrowRight } from 'react-icons/hi'
 
 import { PhillyModel } from './3d/philly'
@@ -40,7 +42,7 @@ export default function Splash() {
         {/* content on top of canvas */}
         <div className="absolute inset-0 flex flex-col justify-center px-2">
           <Image
-            src={InteractiveGraphics}
+            src={InteractiveGraphics as StaticImageData}
             alt="Interactive Graphics Technology"
             className="w-auto pr-4 sm:w-[32rem] md:w-[36rem] lg:w-[40rem] xl:w-[40rem]"
           />
