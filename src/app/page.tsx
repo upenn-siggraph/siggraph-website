@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
-import About from './about'
+import AboutSection from './about/about-section'
 import Splash from './splash'
 import TeamList from './team-list'
 
@@ -38,7 +38,7 @@ export default function Home() {
       <main className="container mx-auto">
         <Nav />
         <Splash />
-        <About />
+        <AboutSection />
         <TeamList />
       </main>
     </>

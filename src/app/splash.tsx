@@ -6,7 +6,7 @@ import { Euler, Vector3 } from 'three'
 import Image, { StaticImageData } from 'next/image'
 import { HiArrowRight } from 'react-icons/hi'
 
-import { PhillyModel } from './3d/philly'
+import { PhillyModel } from '../components/3d/philly'
 
 import InteractiveGraphics from '@/resources/image/interactive-graphics.svg'
 

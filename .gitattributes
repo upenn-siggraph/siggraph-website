@@ -181,6 +181,9 @@ Procfile          text
 *.swf             binary
 *.webm            binary
 
+# 3D
+*.glb             binary
+
 # Archives
 *.7z              binary
 *.gz              binary

@@ -1,15 +1,16 @@
 import Image, { StaticImageData } from 'next/image'
 
-import OurChapter from '../resources/image/our-chapter2.svg'
-import MoreAbout from '../resources/image/more-about.svg'
-import Cubes from '../resources/image/cubes.png'
+import Cubes from './cubes'
 
-export default function About() {
+import OurChapter from '@/resources/image/our-chapter2.svg'
+import MoreAbout from '@/resources/image/more-about.svg'
+
+export default function AboutSection() {
   return (
     <div className="bg-background mt-20 flex h-screen max-h-[1080px] min-h-[600px] flex-col text-white">
-      <div className="m-auto flex flex-row">
-        <div className="basis-1/2 ">
-          <Image src={Cubes} alt="Yellow Cube" className="w-[60rem] pb-40" />
+      <div className="m-auto flex flex-row px-2">
+        <div className="h-[60rem] w-[60rem] basis-1/2">
+          <Cubes />
         </div>
         <div className="ml-12 flex basis-1/2 flex-col self-center">
           <Image
