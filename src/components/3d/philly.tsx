@@ -15,7 +15,7 @@ import {
   Vector3,
 } from 'three'
 
-import { WobblyWireMaterial } from '../../lib/shaders/wobbly-wire'
+import { WobblyWireMaterial } from '@/lib/shaders/wobbly-wire'
 
 export function PhillyModel(props: GroupProps) {
   const materialRef = useRef<Material>(

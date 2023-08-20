@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
@@ -23,24 +22,22 @@ function Nav() {
   )
 }
 
+export const metadata = {
+  title: 'UPenn SIGGRAPH',
+  description:
+    'The official UPenn chapter of the SIGGRAPH organization, focused on researching, developing, and exploring interactive 3D technology.',
+}
+
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <meta
-          name="description"
-          content="Siggraph Funny (we should replace this with NextSEO)"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="container mx-auto">
-        <Nav />
-        <Splash />
-        <AboutSection />
+    <main className="container mx-auto">
+      <Nav />
+      <Splash />
+      <AboutSection />
+      <section>
+        <h2 className="text-4xl font-bold lg:text-8xl">Meet the Team</h2>
         <TeamList />
-      </main>
-    </>
+      </section>
+    </main>
   )
 }
