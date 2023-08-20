@@ -2,54 +2,39 @@
   "basePath": "image/team",
   "team": [
     {
+      "name": "Rain Yan",
+      "role": "Co-President",
+      "image": "logan.webp"
+    },
+    {
+      "name": "Thomas Shaw",
+      "role": "Co-President",
+      "image": "thomas.webp"
+    },
+    {
       "name": "Logan Cho",
       "role": "Treasurer",
       "image": "logan.webp"
     },
     {
-      "name": "Elyssa Chou",
-      "role": "External Relations Chair",
-      "image": "elyssa.webp"
-    },
-    {
-      "name": "Cindy Xu",
-      "role": "Social Event lead",
-      "image": "cindy.webp"
-    },
-    {
-      "name": "Kisha Yan",
-      "role": "Social Event Lead",
-      "image": "kisha.webp"
-    },
-    {
-      "name": "Keyu Lu",
-      "role": "Graphic Design",
-      "image": "keyu.webp"
-    },
-    {
       "name": "Jackie Li",
-      "role": "Graphic Design",
-      "image": "jackie.webp"
+      "role": "Vice President",
+      "image": "logan.webp"
     },
     {
-      "name": "Nicole Chau",
-      "role": "Graphic Design",
-      "image": "nicole.webp"
+      "name": "Dineth Meegoda",
+      "role": "Social Relations Chair",
+      "image": "logan.webp"
     },
     {
-      "name": "Thomas Shaw",
-      "role": "Webmaster",
-      "image": "thomas.webp"
+      "name": "Yuhan Liu",
+      "role": "External Relations Chair",
+      "image": "logan.webp"
     },
     {
-      "name": "Aditya Gupta",
+      "name": "Diana Ouyang",
       "role": "Secretary",
-      "image": "aditya.webp"
-    },
-    {
-      "name": "Sebastian Vargas",
-      "role": "Master's Liason",
-      "image": "sebastian.webp"
+      "image": "logan.webp"
     }
   ]
 }
