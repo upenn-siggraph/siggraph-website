@@ -1,4 +1,5 @@
 import AboutSection from './about-section'
+import FindUsSection from './find-us-section'
 import Splash from './splash-section'
 import TeamSection from './team-section'
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Splash />
       <AboutSection />
       <TeamSection />
+      <FindUsSection />
     </main>
   )
 }

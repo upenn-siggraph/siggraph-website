@@ -65,14 +65,19 @@ export default function Splash() {
           <p className="mt-8 text-lg font-light tracking-wide drop-shadow-sm">
             Enthralling tagline that also describes us well
           </p>
-          <Link
-            href="/find-us"
+          <button
+            type="button"
+            onClick={() => {
+              document
+                .querySelector('#find-us')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }}
             className="group mr-auto mt-3 block rounded-full bg-gradient-to-r from-siggraph-1 via-siggraph-3 to-siggraph-4 p-1 text-left text-lg font-bold tracking-widest transition"
           >
             <div className="flex items-center justify-center gap-2 rounded-full bg-black px-12 py-2 text-center transition-[margin,padding] group-hover:mx-4 group-hover:px-8">
               Find Us <HiArrowRight />
             </div>
-          </Link>
+          </button>
         </div>
       </section>
     </div>
