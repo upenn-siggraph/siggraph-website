@@ -41,7 +41,7 @@ export default async function TeamSection() {
         <h2 className="mb-12 text-5xl font-bold tracking-tight after:ml-[.2em] after:animate-blink after:content-['\_'] lg:text-8xl">
           Meet the Team
         </h2>
-        <ul className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {team.map(({ name, role, image, lqip: lqipResult }) => (
             <li key={name} className="mb-4">
               <LazyImage
