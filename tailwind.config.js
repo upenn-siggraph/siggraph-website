@@ -14,6 +14,16 @@ module.exports = {
           4: 'rgb(176,160,208)',
         },
       },
+      animation: {
+        blink: 'blink 1s steps(1, end) infinite',
+      },
+      keyframes: {
+        blink: {
+          from: { opacity: 1 },
+          '50%': { opacity: 0 },
+          to: { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

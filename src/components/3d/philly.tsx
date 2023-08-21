@@ -17,7 +17,7 @@ import {
 
 import { WobblyWireMaterial } from '@/lib/shaders/wobbly-wire'
 
-export function PhillyModel(props: GroupProps) {
+export default function Philly(props: GroupProps) {
   const materialRef = useRef<Material>(
     new WobblyWireMaterial({
       wireframe: true,
@@ -28,14 +28,17 @@ export function PhillyModel(props: GroupProps) {
       },
     })
   )
+
   const { nodes } = useGLTF('/3d/philly.glb') as unknown as {
     nodes: {
       SmallerJoined: { geometry: BufferGeometry<NormalBufferAttributes> }
     }
   }
+
   useFrame((_, delta) => {
     ;(materialRef.current as Material & { time: number }).time += delta
   })
+
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -49,4 +52,4 @@ export function PhillyModel(props: GroupProps) {
   )
 }
 
-useGLTF.preload('/philly.glb')
+useGLTF.preload('/3d/philly.glb')

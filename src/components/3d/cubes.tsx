@@ -8,7 +8,7 @@ export default function Cubes() {
   const { scene } = useGLTF('/3d/cubes.glb')
 
   return (
-    <Canvas camera={{ position: [0, 0, 2] }}>
+    <Canvas camera={{ position: [0, 0, 2], zoom: 1.3 }}>
       <directionalLight position={[2, 2, 4]} intensity={2} />
       {scene.children.map((child) => (
         <Float
@@ -26,3 +26,5 @@ export default function Cubes() {
     </Canvas>
   )
 }
+
+useGLTF.preload('/3d/cubes.glb')

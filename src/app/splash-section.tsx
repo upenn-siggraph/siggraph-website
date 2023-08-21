@@ -2,13 +2,18 @@
 
 import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Euler, Vector3 } from 'three'
+import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
 import { HiArrowRight } from 'react-icons/hi'
-
-import { PhillyModel } from '../components/3d/philly'
+import { Euler, Vector3 } from 'three'
+import Link from 'next/link'
 
 import InteractiveGraphics from '@/resources/image/interactive-graphics.svg'
+import SiggraphLogo from '@/resources/image/upenn-siggraph-logo.svg'
+
+const PhillyModel = dynamic(() => import('@/components/3d/philly'), {
+  ssr: false,
+})
 
 function CameraRotation() {
   useFrame(({ camera }, delta) => {
@@ -25,7 +30,18 @@ function CameraRotation() {
 
 export default function Splash() {
   return (
-    <>
+    <div>
+      <nav className="flex flex-row items-center py-5 px-4">
+        <Image
+          src={SiggraphLogo as StaticImageData}
+          alt="UPenn Siggraph"
+          width={300}
+        />
+        <Link href="/" className="ml-auto hidden">
+          {/* TODO: this */}
+          EVENT NAME HERE!
+        </Link>
+      </nav>
       {/* this div is the dots */}
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
@@ -40,25 +56,25 @@ export default function Splash() {
       </div>
       <section className="relative max-h-[1000px] min-h-[600px] [height:calc(100vh-120px)]">
         {/* content on top of canvas */}
-        <div className="absolute inset-0 flex flex-col justify-center px-2">
+        <div className="absolute inset-0 flex flex-col justify-center px-4">
           <Image
             src={InteractiveGraphics as StaticImageData}
             alt="Interactive Graphics Technology"
             className="w-auto pr-4 sm:w-[32rem] md:w-[36rem] lg:w-[40rem] xl:w-[40rem]"
           />
-          <p className="mt-8 font-light tracking-wide drop-shadow-sm">
+          <p className="mt-8 text-lg font-light tracking-wide drop-shadow-sm">
             Enthralling tagline that also describes us well
           </p>
-          <button
-            type="button"
-            className="mr-auto mt-3 block rounded-full bg-gradient-to-r from-siggraph-1 via-siggraph-3 to-siggraph-4 p-1 text-left font-medium uppercase tracking-[0.3em] hover:tracking-[0.4em]"
+          <Link
+            href="/find-us"
+            className="group mr-auto mt-3 block rounded-full bg-gradient-to-r from-siggraph-1 via-siggraph-3 to-siggraph-4 p-1 text-left text-lg font-bold tracking-widest transition"
           >
-            <div className="flex w-64 items-center justify-center gap-2 rounded-full bg-black px-5 py-2 text-center transition-all">
-              Learn More <HiArrowRight />
+            <div className="flex items-center justify-center gap-2 rounded-full bg-black px-12 py-2 text-center transition-[margin,padding] group-hover:mx-4 group-hover:px-8">
+              Find Us <HiArrowRight />
             </div>
-          </button>
+          </Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
