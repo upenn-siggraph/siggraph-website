@@ -26,9 +26,9 @@ export default function FindUsSection() {
         >
           <div className="transition-transform group-hover:translate-x-2 group-hover:scale-[1.01]">
             <FaDiscord className="mr-6 mb-1 inline-block text-3xl text-white max-xl:hidden" />
-            Join us on the{' '}
+            Join the{' '}
             <b className="font-semibold text-white">Penn Graphics Gang</b>{' '}
-            Discord server for event announcements and updates!{' '}
+            Discord for event announcements and updates!{' '}
             <HiArrowRight className="ml-2 mb-1 inline-block text-xl text-white" />
           </div>
         </Link>
