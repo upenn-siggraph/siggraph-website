@@ -2,31 +2,34 @@ import Image, { StaticImageData } from 'next/image'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
-import OurChapter from '@/resources/image/our-chapter2.svg'
 import MoreAbout from '@/resources/image/more-about.svg'
 
 const Cubes = dynamic(() => import('@/components/3d/cubes'), { ssr: false })
 
 export default function AboutSection() {
   return (
-    <div className="relative grid-cols-2 overflow-hidden text-white lg:mx-12 lg:grid">
-      <div className="absolute aspect-square max-lg:-mb-[70vw] max-lg:w-full max-lg:max-w-[40rem] lg:relative lg:mb-0">
+    <div className="relative flex h-screen max-h-[42rem] grid-cols-2 flex-col justify-center overflow-hidden py-12 text-white lg:mx-12 lg:grid lg:max-h-[60rem] lg:items-center">
+      <div className="absolute aspect-square w-full lg:relative">
         <Cubes />
       </div>
-      <div className="relative flex flex-col self-center bg-gradient-to-b from-transparent to-black px-4 max-lg:mt-16">
-        <Image
-          src={OurChapter as StaticImageData}
-          alt="Our Chapter"
-          className="mb-8 w-full max-w-[32rem] drop-shadow-lg"
-        />
-        <span className="pb-5 text-lg">
-          Lorem ipsum siat beniere esse insert random Latin here fiat fecem
-          lorem die ablative absolute explanation on what we do etc etc etc
-        </span>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/90 lg:hidden" />
+      <div className="relative flex flex-col px-4">
+        <h2 className="select-none text-5xl font-extrabold tracking-tight drop-shadow-lg lg:text-8xl">
+          Our Chapter
+        </h2>
+        <p className="mt-8 mb-4 font-light tracking-wide text-neutral-100 lg:text-lg">
+          We are the the{' '}
+          <b className="font-medium text-white">
+            official UPenn chapter of SIGGRAPH
+          </b>
+          , a graphics conference organized by ACM. We are passionate
+          undergraduate students who want to explore the future of graphics
+          technology.
+        </p>
         <Link
           target="_blank"
           href="https://www.siggraph.org/"
-          className="w-full max-w-[28rem] transition hover:-translate-y-[0.1rem] hover:scale-[1.01] hover:brightness-125"
+          className="w-full max-w-[28rem] select-none transition hover:-translate-y-[0.1rem] hover:scale-[1.01] hover:brightness-125"
         >
           <Image
             src={MoreAbout as StaticImageData}

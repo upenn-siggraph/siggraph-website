@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import { FaDiscord } from 'react-icons/fa'
-import { HiArrowRight } from 'react-icons/hi'
 
 import EarthMap from '@/resources/image/earthmap.webp'
 
-export default function FindUsSection() {
+export default function ContactSection() {
   return (
     <div id="find-us">
       <div className="absolute left-0 right-0 border-t-[1px] border-neutral-600" />
@@ -15,21 +14,23 @@ export default function FindUsSection() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-siggraph-2/60 via-siggraph-3/60 to-siggraph-4/60 bg-blend-multiply" />
       </div>
-      <section className="relative flex h-screen max-h-[60rem] min-h-max flex-col justify-center px-4 drop-shadow-md">
-        <h1 className="text-5xl font-bold tracking-tight lg:text-8xl">
+      <section className="relative flex h-screen max-h-[60rem] min-h-max flex-col justify-center px-4">
+        <h2 className="select-none text-5xl font-bold tracking-tight drop-shadow-md lg:text-8xl">
           Get involved
-        </h1>
+        </h2>
+        <p className="mt-6 text-xl">
+          Check the{' '}
+          <b className="font-semibold text-white">Penn Graphics Gang</b> Discord
+          for event announcements and updates!{' '}
+        </p>
         <Link
           target="_blank"
           href="https://discord.gg/uenAAP3Wue"
-          className="group -ml-4 mt-4 p-4 text-2xl text-white/80"
+          className="group mt-4 mr-auto inline-block select-none text-xl drop-shadow"
         >
-          <div className="transition-transform group-hover:translate-x-2 group-hover:scale-[1.01]">
-            <FaDiscord className="mr-6 mb-1 inline-block text-3xl text-white max-xl:hidden" />
-            Join the{' '}
-            <b className="font-semibold text-white">Penn Graphics Gang</b>{' '}
-            Discord for event announcements and updates!{' '}
-            <HiArrowRight className="ml-2 mb-1 inline-block text-xl text-white" />
+          <div className="flex w-max flex-row items-center gap-2 rounded-full bg-white px-8 py-2 font-bold tracking-wide text-purple-700 transition-transform group-hover:translate-x-2 group-hover:scale-[1.01]">
+            <FaDiscord className="inline-block text-3xl" />
+            Join
           </div>
         </Link>
       </section>

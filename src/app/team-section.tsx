@@ -29,7 +29,7 @@ export default async function TeamSection() {
   const team = await getTeamData()
 
   return (
-    <div>
+    <div className="mb-12">
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
         className="absolute left-0 right-0 h-screen max-h-[80rem] border-t-[1px] border-neutral-600 bg-repeat [background-size:20px] [background-position:center_3px]"
@@ -38,10 +38,10 @@ export default async function TeamSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,1)]" />
       </div>
       <section className="relative px-4 pt-12 lg:pt-16">
-        <h2 className="mb-12 text-5xl font-bold tracking-tight after:ml-[.2em] after:animate-blink after:content-['\_'] lg:text-8xl">
+        <h2 className="mb-12 select-none text-5xl font-bold tracking-tight after:ml-[.2em] after:animate-blink after:content-['\_'] lg:text-8xl">
           Meet the Team
         </h2>
-        <ul className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <ul className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {team.map(({ name, role, image, lqip: lqipResult }) => (
             <li key={name} className="mb-4">
               <LazyImage
@@ -50,11 +50,11 @@ export default async function TeamSection() {
                 width={300}
                 height={300}
                 alt={name}
-                className="aspect-square h-auto w-full rounded-xl"
+                className="aspect-square h-auto w-full select-none rounded-xl"
               />
-              <div className="m-4">
+              <div className="my-4 sm:mx-4">
                 <h3 className="text-2xl font-bold xl:text-3xl">{name}</h3>
-                <p className="tracking-wide text-gray-400">{role}</p>
+                <p className="mt-1 tracking-wide text-neutral-400">{role}</p>
               </div>
             </li>
           ))}

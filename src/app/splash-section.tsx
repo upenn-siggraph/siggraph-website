@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
 import { HiArrowRight } from 'react-icons/hi'
 import { Euler, Vector3 } from 'three'
-import Link from 'next/link'
 
 import InteractiveGraphics from '@/resources/image/interactive-graphics.svg'
 import SiggraphLogo from '@/resources/image/upenn-siggraph-logo.svg'
@@ -31,53 +30,58 @@ function CameraRotation() {
 export default function Splash() {
   return (
     <div>
-      <nav className="flex flex-row items-center py-5 px-4">
+      <nav className="flex select-none flex-row items-center py-5 px-4">
         <Image
           src={SiggraphLogo as StaticImageData}
           alt="UPenn Siggraph"
           width={300}
         />
-        <Link href="/" className="ml-auto hidden">
-          {/* TODO: this */}
-          EVENT NAME HERE!
-        </Link>
       </nav>
       {/* this div is the dots */}
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
-        className="absolute left-0 right-0 max-h-[1000px] min-h-[600px] border-t-[1px] border-b-[1px] border-neutral-600 bg-repeat [background-size:20px] [height:calc(100vh-120px)] [background-position:center_3px]"
+        className="absolute left-0 right-0 max-h-[1000px] min-h-[550px] border-t-[1px] border-b-[1px] border-neutral-600 bg-repeat [background-size:20px] [height:calc(100vh-120px)] [background-position:center_3px]"
       >
-        {/* this div is the gradient covering up the dots */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,1)]" />
+        {/* this div is the gradient from the top covering up the dots */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/100" />
         <Canvas>
           <CameraRotation />
           <PhillyModel />
         </Canvas>
+        {/* this is the gradient from bottom covering the mesh to show the text. */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/0" />
       </div>
-      <section className="relative max-h-[1000px] min-h-[600px] [height:calc(100vh-120px)]">
+      <section className="relative max-h-[1000px] min-h-[550px] [height:calc(100vh-120px)]">
         {/* content on top of canvas */}
-        <div className="absolute inset-0 flex flex-col justify-center px-4">
+        <div className="absolute inset-0 flex flex-col justify-end px-4 lg:justify-center">
           <Image
             src={InteractiveGraphics as StaticImageData}
             alt="Interactive Graphics Technology"
-            className="w-auto pr-4 sm:w-[32rem] md:w-[36rem] lg:w-[40rem] xl:w-[40rem]"
+            className="w-auto select-none pr-4 sm:w-[32rem] md:w-[36rem] lg:mt-14 lg:mb-0 lg:w-[40rem] xl:w-[40rem]"
           />
-          <p className="mt-8 text-lg font-light tracking-wide drop-shadow-sm">
-            Enthralling tagline that also describes us well
-          </p>
-          <button
-            type="button"
-            onClick={() => {
-              document
-                .querySelector('#find-us')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
-            className="group mr-auto mt-3 block rounded-full bg-gradient-to-r from-siggraph-1 via-siggraph-3 to-siggraph-4 p-1 text-left text-lg font-bold tracking-widest transition"
-          >
-            <div className="flex items-center justify-center gap-2 rounded-full bg-black px-12 py-2 text-center transition-[margin,padding] group-hover:mx-4 group-hover:px-8">
-              Find Us <HiArrowRight />
-            </div>
-          </button>
+          <div className="mb-14 mt-12 font-light tracking-wide text-neutral-100 lg:text-lg">
+            <p className="max-w-prose">
+              We are Penn&apos;s premiere undergraduate computer
+              graphics-focused club.
+            </p>
+            <p className="mt-2 max-w-prose">
+              All things rendered offline to real-time. Join us at social
+              events, career-oriented panels, workshops, and tech demos.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                document
+                  .querySelector('#find-us')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              className="group mr-auto mt-6 block select-none rounded-full bg-gradient-to-r from-siggraph-1 via-siggraph-3 to-siggraph-4 p-1 text-left text-lg font-bold tracking-wide text-white transition"
+            >
+              <div className="flex items-center justify-center gap-2 rounded-full bg-black px-12 py-2 text-center transition-[margin,padding] group-hover:mx-4 group-hover:px-8">
+                Find Us <HiArrowRight />
+              </div>
+            </button>
+          </div>
         </div>
       </section>
     </div>

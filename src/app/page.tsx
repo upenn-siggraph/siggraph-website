@@ -1,5 +1,5 @@
 import AboutSection from './about-section'
-import FindUsSection from './find-us-section'
+import ContactSection from './contact-section'
 import Splash from './splash-section'
 import TeamSection from './team-section'
 
@@ -11,11 +11,11 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="container mx-auto space-y-20">
+    <main className="container mx-auto">
       <Splash />
       <AboutSection />
       <TeamSection />
-      <FindUsSection />
+      <ContactSection />
     </main>
   )
 }
