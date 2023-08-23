@@ -22,9 +22,9 @@ export default function AboutSection() {
           <b className="font-medium text-white">
             official UPenn chapter of SIGGRAPH
           </b>
-          , a graphics conference organized by ACM. We are passionate
-          undergraduate students who want to explore the future of graphics
-          technology.
+          , a nonprofit organization with annual conferences and thousands of
+          members across the globe. We are passionate undergraduate students who
+          want to explore the future of graphics technology.
         </p>
         <Link
           target="_blank"

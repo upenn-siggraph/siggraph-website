@@ -62,11 +62,12 @@ export default function Splash() {
           <div className="mb-14 mt-12 font-light tracking-wide text-neutral-100 lg:text-lg">
             <p className="max-w-prose">
               We are Penn&apos;s premiere undergraduate computer
-              graphics-focused club.
+              graphics-focused club, for all things rendered offline to
+              real-time.
             </p>
             <p className="mt-2 max-w-prose">
-              All things rendered offline to real-time. Join us at social
-              events, career-oriented panels, workshops, and tech demos.
+              Join us at social events, career-oriented panels, workshops, and
+              tech demos.
             </p>
             <button
               type="button"
