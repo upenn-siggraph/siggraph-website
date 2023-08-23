@@ -2,14 +2,14 @@
   "basePath": "image/team",
   "team": [
     {
-      "name": "Rain Yan",
-      "role": "Co-President",
-      "image": "rain.webp"
-    },
-    {
       "name": "Thomas Shaw",
       "role": "Co-President",
       "image": "thomas.webp"
+    },
+    {
+      "name": "Rain Yan",
+      "role": "Co-President",
+      "image": "rain.webp"
     },
     {
       "name": "Logan Cho",
