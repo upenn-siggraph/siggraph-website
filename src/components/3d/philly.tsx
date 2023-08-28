@@ -16,6 +16,7 @@ import {
 } from 'three'
 
 import { WobblyWireMaterial } from '@/lib/shaders/wobbly-wire'
+import meta from '@/data/meta.json'
 
 export default function Philly(props: GroupProps) {
   const materialRef = useRef<Material>(
@@ -29,7 +30,7 @@ export default function Philly(props: GroupProps) {
     })
   )
 
-  const { nodes } = useGLTF('/3d/philly.glb') as unknown as {
+  const { nodes } = useGLTF(`${meta.basePath}/3d/philly.glb`) as unknown as {
     nodes: {
       SmallerJoined: { geometry: BufferGeometry<NormalBufferAttributes> }
     }
@@ -52,4 +53,4 @@ export default function Philly(props: GroupProps) {
   )
 }
 
-useGLTF.preload('/3d/philly.glb')
+useGLTF.preload(`${meta.basePath}/3d/philly.glb`)

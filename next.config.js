@@ -16,6 +16,7 @@ const nextConfig = {
   output: 'export',
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
+  basePath: '/siggraph',
 }
 
 module.exports = withMDX(nextConfig)

@@ -4,8 +4,10 @@ import { Clone, Float, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Bloom, EffectComposer } from '@react-three/postprocessing'
 
+import meta from '@/data/meta.json'
+
 export default function Cubes() {
-  const { scene } = useGLTF('/3d/cubes.glb')
+  const { scene } = useGLTF(`${meta.basePath}/3d/cubes.glb`)
 
   return (
     <Canvas camera={{ position: [0, 0, 2], zoom: 1.3 }}>
@@ -27,4 +29,4 @@ export default function Cubes() {
   )
 }
 
-useGLTF.preload('/3d/cubes.glb')
+useGLTF.preload(`${meta.basePath}/3d/cubes.glb`)
