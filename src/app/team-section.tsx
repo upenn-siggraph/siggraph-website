@@ -29,7 +29,7 @@ export default async function TeamSection() {
   const team = await getTeamData()
 
   return (
-    <div className="mb-12">
+    <div className="mb-12 px-16">
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
         className="absolute left-0 right-0 h-screen max-h-[80rem] border-t-[1px] border-neutral-600 bg-repeat [background-size:20px] [background-position:center_3px]"

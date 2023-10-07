@@ -5,7 +5,7 @@ import EarthMap from '@/resources/image/earthmap.webp'
 
 export default function ContactSection() {
   return (
-    <div id="find-us">
+    <div id="find-us" className="px-16">
       <div className="absolute left-0 right-0 border-t-[1px] border-neutral-600" />
       <div className="absolute left-0 right-0 h-screen max-h-[60rem] overflow-hidden">
         <div

@@ -29,14 +29,7 @@ function CameraRotation() {
 
 export default function Splash() {
   return (
-    <div>
-      <nav className="flex select-none flex-row items-center py-5 px-4">
-        <Image
-          src={SiggraphLogo as StaticImageData}
-          alt="UPenn Siggraph"
-          width={300}
-        />
-      </nav>
+    <div className="px-16">
       {/* this div is the dots */}
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}

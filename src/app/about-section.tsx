@@ -8,7 +8,7 @@ const Cubes = dynamic(() => import('@/components/3d/cubes'), { ssr: false })
 
 export default function AboutSection() {
   return (
-    <div className="relative flex h-screen max-h-[42rem] grid-cols-2 flex-col justify-center overflow-hidden py-12 text-white lg:mx-12 lg:grid lg:max-h-[60rem] lg:items-center">
+    <div className="relative flex h-screen max-h-[42rem] grid-cols-2 flex-col justify-center overflow-hidden py-12 px-16 text-white lg:mx-12 lg:grid lg:max-h-[60rem] lg:items-center">
       <div className="absolute aspect-square w-full lg:relative">
         <Cubes />
       </div>
