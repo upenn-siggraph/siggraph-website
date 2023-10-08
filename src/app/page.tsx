@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="container mx-auto">
+    <main className="w-full">
       <Navbar />
       <EventBanner />
       <Splash />
