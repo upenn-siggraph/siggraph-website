@@ -8,7 +8,6 @@ import { HiArrowRight } from 'react-icons/hi'
 import { Euler, Vector3 } from 'three'
 
 import InteractiveGraphics from '@/resources/image/interactive-graphics.svg'
-import SiggraphLogo from '@/resources/image/upenn-siggraph-logo.svg'
 
 const PhillyModel = dynamic(() => import('@/components/3d/philly'), {
   ssr: false,
@@ -33,7 +32,7 @@ export default function Splash() {
       {/* this div is the dots */}
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
-        className="absolute left-0 right-0 max-h-[1000px] min-h-[550px] border-t-[1px] border-b-[1px] border-neutral-600 bg-repeat [background-size:20px] [height:calc(100vh-120px)] [background-position:center_3px]"
+        className="absolute left-0 right-0 max-h-[1000px] min-h-[550px] border-t-[1px] border-b-[1px] border-neutral-600 bg-repeat [background-size:20px] [background-position:center_3px] [height:calc(100vh-120px)]"
       >
         {/* this div is the gradient from the top covering up the dots */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/100" />

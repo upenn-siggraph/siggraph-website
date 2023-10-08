@@ -1,9 +1,9 @@
 import AboutSection from './about-section'
 import ContactSection from './contact-section'
+import EventBanner from './event-banner'
+import Navbar from './navbar'
 import Splash from './splash-section'
 import TeamSection from './team-section'
-import EventBanner from './event-banner'
-import Navbar from "./navbar";
 
 export const metadata = {
   title: 'UPenn SIGGRAPH',

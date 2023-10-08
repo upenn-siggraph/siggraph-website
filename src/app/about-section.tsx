@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from 'next/image'
 import dynamic from 'next/dynamic'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import MoreAbout from '@/resources/image/more-about.svg'
