@@ -5,11 +5,11 @@ export default function EventBanner() {
         <span className="tracking-wide">
           <b>Next Upcoming Event:</b>
         </span>{' '}
-        Cesium Demo Reel Night!
+        Texturing workshop with Dineth!
         <br />
         <span className="text-lg">
           {' '}
-          Tuesday, October 17, 5:30 pm - 9:00 pm @ Cesium HQ
+          Sunday, November 5th @ GBM
         </span>
       </div>
     </div>
