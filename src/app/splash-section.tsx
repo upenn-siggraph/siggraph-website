@@ -32,7 +32,7 @@ export default function Splash() {
       {/* this div is the dots */}
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
-        className="absolute left-0 right-0 max-h-[1000px] min-h-[550px] border-t-[1px] border-b-[1px] border-neutral-600 bg-repeat [background-size:20px] [background-position:center_3px] [height:calc(100vh-120px)]"
+        className="absolute left-0 right-0 max-h-[1000px] min-h-[550px] border-b-[1px] border-t-[1px] border-neutral-600 bg-repeat [background-position:center_3px] [background-size:20px] [height:calc(100vh-120px)]"
       >
         {/* this div is the gradient from the top covering up the dots */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/100" />
@@ -49,7 +49,7 @@ export default function Splash() {
           <Image
             src={InteractiveGraphics as StaticImageData}
             alt="Interactive Graphics Technology"
-            className="w-auto select-none pr-4 sm:w-[32rem] md:w-[36rem] lg:mt-14 lg:mb-0 lg:w-[40rem] xl:w-[40rem]"
+            className="w-auto select-none pr-4 sm:w-[32rem] md:w-[36rem] lg:mb-0 lg:mt-14 lg:w-[40rem] xl:w-[40rem]"
           />
           <div className="mb-14 mt-12 font-light tracking-wide text-neutral-100 lg:text-lg">
             <p className="max-w-prose">

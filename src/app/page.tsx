@@ -1,7 +1,7 @@
 import AboutSection from './about-section'
 import ContactSection from './contact-section'
 import EventBanner from './event-banner'
-import Navbar from './navbar'
+import Header from './header'
 import Splash from './splash-section'
 import TeamSection from './team-section'
 
@@ -13,13 +13,15 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="w-full">
-      <Navbar />
-      <EventBanner />
-      <Splash />
-      <AboutSection />
-      <TeamSection />
-      <ContactSection />
-    </main>
+    <>
+      <Header />
+      <main className="w-full">
+        <EventBanner />
+        <Splash />
+        <AboutSection />
+        <TeamSection />
+        <ContactSection />
+      </main>
+    </>
   )
 }

@@ -35,5 +35,5 @@ export const WobblyWireMaterial = shaderMaterial(
     float intensity = (pow(waveIntensity, 2.) + pow(wave2Intensity, 2.) * 1.) * distFactor;
     gl_FragColor.rgba = vec4(vec3(1.5) * intensity, clamp(intensity, 0., 1.));
   }
-`
+`,
 )

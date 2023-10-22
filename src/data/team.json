@@ -12,11 +12,6 @@
       "image": "rain.webp"
     },
     {
-      "name": "Logan Cho",
-      "role": "Treasurer",
-      "image": "logan.webp"
-    },
-    {
       "name": "Jackie Li",
       "role": "Vice President",
       "image": "jackie.webp"
@@ -40,6 +35,41 @@
       "name": "Diana Ouyang",
       "role": "Secretary",
       "image": "diana.webp"
+    },
+    {
+      "name": "Maggie Song",
+      "role": "Graphics",
+      "image": "maggie.webp"
+    },
+    {
+      "name": "Andy Wang",
+      "role": "CGGT Liason",
+      "image": "andy.webp"
+    },
+    {
+      "name": "Christina Qiu",
+      "role": "Graphics",
+      "image": "christina.webp"
+    },
+    {
+      "name": "Jimin Choi",
+      "role": "Graphics",
+      "image": "jimin.webp"
+    },
+    {
+      "name": "Anthony Ge",
+      "role": "Sophomore Liason",
+      "image": "anthony.webp"
+    },
+    {
+      "name": "Charles Wang",
+      "role": "Webmaster",
+      "image": "charles.webp"
+    },
+    {
+      "name": "Aaron Jiang",
+      "role": "Webmaster",
+      "image": "aaron.webp"
     }
   ]
 }

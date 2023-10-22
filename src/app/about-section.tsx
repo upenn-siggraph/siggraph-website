@@ -8,7 +8,7 @@ const Cubes = dynamic(() => import('@/components/3d/cubes'), { ssr: false })
 
 export default function AboutSection() {
   return (
-    <div className="relative flex h-screen max-h-[42rem] grid-cols-2 flex-col justify-center overflow-hidden py-12 px-16 text-white lg:mx-12 lg:grid lg:max-h-[60rem] lg:items-center">
+    <div className="relative flex h-screen max-h-[42rem] grid-cols-2 flex-col justify-center overflow-hidden px-16 py-12 text-white lg:mx-12 lg:grid lg:max-h-[60rem] lg:items-center">
       <div className="absolute aspect-square w-full lg:relative">
         <Cubes />
       </div>
@@ -17,7 +17,7 @@ export default function AboutSection() {
         <h2 className="select-none text-5xl font-extrabold tracking-tight drop-shadow-lg lg:text-8xl">
           Our Chapter
         </h2>
-        <p className="mt-8 mb-4 font-light tracking-wide text-neutral-100 lg:text-lg">
+        <p className="mb-4 mt-8 font-light tracking-wide text-neutral-100 lg:text-lg">
           We are the the{' '}
           <b className="font-medium text-white">
             official UPenn chapter of SIGGRAPH
