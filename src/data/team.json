@@ -40,6 +40,41 @@
       "name": "Diana Ouyang",
       "role": "Secretary",
       "image": "diana.webp"
+    },
+    {
+      "name": "Maggie Song",
+      "role": "Role",
+      "image": "maggie.webp"
+    },
+    {
+      "name": "Andy Wang",
+      "role": "Role",
+      "image": "andy.webp"
+    },
+    {
+      "name": "Christina Qiu",
+      "role": "Role",
+      "image": "christina.webp"
+    },
+    {
+      "name": "Jimin Choi",
+      "role": "Role",
+      "image": "jimin.webp"
+    },
+    {
+      "name": "Anthony Ge",
+      "role": "Role",
+      "image": "anthony.webp"
+    },
+    {
+      "name": "Charles Wang",
+      "role": "Webmaster",
+      "image": "charles.webp"
+    },
+    {
+      "name": "Aaron Jiang",
+      "role": "Webmaster",
+      "image": "aaron.webp"
     }
   ]
 }
