@@ -21,7 +21,7 @@ async function getTeamData() {
         lqip: `data:image/png;base64,${lqipBuffer.toString('base64')}`,
         ...member,
       }
-    })
+    }),
   )
 }
 
@@ -32,7 +32,7 @@ export default async function TeamSection() {
     <div className="mb-12 px-16">
       <div
         style={{ backgroundImage: 'url(/image/design/bg_dots.svg)' }}
-        className="absolute left-0 right-0 h-screen max-h-[80rem] border-t-[1px] border-neutral-600 bg-repeat [background-size:20px] [background-position:center_3px]"
+        className="absolute left-0 right-0 h-screen max-h-[80rem] border-t-[1px] border-neutral-600 bg-repeat [background-position:center_3px] [background-size:20px]"
       >
         {/* this div is the gradient covering up the dots */}
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,1)]" />

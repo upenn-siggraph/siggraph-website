@@ -7,10 +7,7 @@ export default function EventBanner() {
         </span>{' '}
         Texturing workshop with Dineth!
         <br />
-        <span className="text-lg">
-          {' '}
-          Sunday, November 5th @ GBM
-        </span>
+        <span className="text-lg"> Sunday, November 5th @ GBM</span>
       </div>
     </div>
   )

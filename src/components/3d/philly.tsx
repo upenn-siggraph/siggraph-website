@@ -27,7 +27,7 @@ export default function Philly(props: GroupProps) {
         color: { value: new Vector3(1, 1, 1) },
         time: { value: 0 },
       },
-    })
+    }),
   )
 
   const { nodes } = useGLTF(`${meta.basePath}/3d/philly.glb`) as unknown as {

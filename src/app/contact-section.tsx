@@ -26,7 +26,7 @@ export default function ContactSection() {
         <Link
           target="_blank"
           href="https://discord.gg/uenAAP3Wue"
-          className="group mt-4 mr-auto inline-block select-none text-xl drop-shadow"
+          className="group mr-auto mt-4 inline-block select-none text-xl drop-shadow"
         >
           <div className="flex w-max flex-row items-center gap-2 rounded-full bg-white px-8 py-2 font-bold tracking-wide text-purple-700 transition-transform group-hover:translate-x-2 group-hover:scale-[1.01]">
             <FaDiscord className="inline-block text-3xl" />
