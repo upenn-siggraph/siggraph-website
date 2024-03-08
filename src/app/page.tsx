@@ -1,6 +1,5 @@
 import AboutSection from './about-section'
 import ContactSection from './contact-section'
-import EventBanner from './event-banner'
 import Header from './header'
 import Splash from './splash-section'
 import TeamSection from './team-section'
@@ -16,7 +15,6 @@ export default function Home() {
     <>
       <Header />
       <main className="w-full">
-        <EventBanner />
         <Splash />
         <AboutSection />
         <TeamSection />
